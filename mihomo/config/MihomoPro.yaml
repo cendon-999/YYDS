@@ -146,6 +146,7 @@ proxy-groups:
   - {name: 网速测试,  <<: *SelectProxy, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Speedtest.png}
   # 公司
   - {name: 微软服务,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png}
+  - {name: GitHub,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png}
   - {name: 谷歌服务,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png}
   - {name: 苹果服务,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
   - {name: 脸书服务,  <<: *SelectUS, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
@@ -264,7 +265,7 @@ rules:
   - RULE-SET,disney,国际媒体
   - RULE-SET,hbo,国际媒体
   - RULE-SET,tiktok,国际媒体
-  - RULE-SET,github,微软服务
+  - RULE-SET,github,GitHub
   - RULE-SET,onedrive,微软服务
   - RULE-SET,microsoft,微软服务
   - RULE-SET,instagram,脸书服务
