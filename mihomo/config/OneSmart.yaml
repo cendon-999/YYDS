@@ -111,7 +111,8 @@ proxy-groups:
   - {name: AI平台,    <<: *Sel_US, include-all: true, filter: "🇺🇸|美|🇸🇬|新|🇯🇵|日|🇼🇸|🇹🇼|台",exclude-filter: "🇭🇰|港", icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
   - {name: 电报消息,   <<: *Sel_SG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
-  - {name: Netflix,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: Netflix,  <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: YouTube,  <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 新加坡智能, <<: *Smart, filter: *FilterSG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
@@ -145,7 +146,7 @@ rules:
   - DOMAIN-SUFFIX,imee.me,DIRECT
   - RULE-SET,telegram,电报消息
   - RULE-SET,category-ai-!cn,AI平台
-  - RULE-SET,youtube,国际媒体
+  - RULE-SET,youtube,YouTube
   - RULE-SET,spotify,国际媒体
   - RULE-SET,netflix,Netflix
   - RULE-SET,disney,国际媒体
