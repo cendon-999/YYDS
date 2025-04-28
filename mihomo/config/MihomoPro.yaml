@@ -54,7 +54,7 @@ ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical,
 proxy-providers:
   机场A: {<<: *PProviders, url: '机场订阅地址1', override: {additional-prefix: '[机场A] '}}
   机场B: {<<: *PProviders, url: '机场订阅地址2', override: {additional-prefix: '[机场B] '}}
-  机场C: {<<: *PProviders, url: '机场订阅地址3', override: {additional-prefix: '[机场C] '}}
+  
 
 # 全局配置
 mode: rule
