@@ -136,6 +136,7 @@ proxy-groups:
   - {name: Emby,     <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png}
   - {name: YouTube,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
   - {name: NetFlix,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: HBO,      <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/HBO.png}
   - {name: 国际媒体,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: Telegram, <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: Twitter,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/X.png}
@@ -263,7 +264,7 @@ rules:
   - RULE-SET,spotify,国际媒体
   - RULE-SET,netflix,NetFlix
   - RULE-SET,disney,国际媒体
-  - RULE-SET,hbo,国际媒体
+  - RULE-SET,hbo,HBO
   - RULE-SET,tiktok,国际媒体
   - RULE-SET,github,GitHub
   - RULE-SET,onedrive,微软服务
