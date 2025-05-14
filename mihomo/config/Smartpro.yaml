@@ -254,7 +254,7 @@ rules:
   - RULE-SET,disney,国际媒体
   - RULE-SET,hbo,HBO
   - RULE-SET,tiktok,国际媒体
-  - RULE-SET,github,Github
+  - RULE-SET,github,GitHub
   - RULE-SET,onedrive,微软服务
   - RULE-SET,microsoft,微软服务
   - RULE-SET,instagram,脸书服务
