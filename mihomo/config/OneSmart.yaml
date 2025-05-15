@@ -115,6 +115,7 @@ proxy-groups:
   - {name: 电报消息,   <<: *Sel_SG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: Netflix,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: HBO,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/HBO.png}
   - {name: YouTube,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
   - {name: 游戏平台,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
@@ -156,7 +157,7 @@ rules:
   - RULE-SET,spotify,国际媒体
   - RULE-SET,netflix,Netflix
   - RULE-SET,disney,国际媒体
-  - RULE-SET,hbo,国际媒体
+  - RULE-SET,hbo,HBO
   - RULE-SET,category-games,游戏平台
   - RULE-SET,download,DIRECT
   - RULE-SET,cn_domain,DIRECT
