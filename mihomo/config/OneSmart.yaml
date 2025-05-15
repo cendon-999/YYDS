@@ -24,10 +24,10 @@ FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(
 FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
 FilterOther: &FilterOther '^(?!.*(DIRECT|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAll: &FilterAll '^(?!.*(DIRECT|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
-Select: &Select {type: select, proxies: [香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧洲智能]}
-Sel_Smart: &Sel_Smart {type: select, proxies: [一键智能, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧洲智能]}
-Sel_US: &Sel_US {type: select, proxies: [美国智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 欧洲智能]}
-Sel_SG: &Sel_SG {type: select, proxies: [新加坡智能, 美国智能, 台湾智能, 日本智能, 韩国智能, 欧洲智能]}
+Select: &Select {type: select, proxies: [香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧洲智能, DIRECT]}
+Sel_Smart: &Sel_Smart {type: select, proxies: [一键智能, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧洲智能, DIRECT]}
+Sel_US: &Sel_US {type: select, proxies: [美国智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 欧洲智能, DIRECT]}
+Sel_SG: &Sel_SG {type: select, proxies: [新加坡智能, 美国智能, 台湾智能, 日本智能, 韩国智能, 欧洲智能, DIRECT]}
 
 # 填写订阅,名称不能重复
 proxy-providers:
@@ -116,7 +116,7 @@ proxy-groups:
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: Netflix,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
   - {name: YouTube,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
-  - {name: 游戏平台,   <<: *Sel_Smart, DIRECT, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
+  - {name: 游戏平台,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 新加坡智能, <<: *Smart, filter: *FilterSG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
