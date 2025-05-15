@@ -116,7 +116,7 @@ proxy-groups:
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: Netflix,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
   - {name: YouTube,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
-  - {name: 游戏平台,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
+  - {name: 游戏平台,   <<: *Sel_Smart, DIRECT, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 新加坡智能, <<: *Smart, filter: *FilterSG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
