@@ -137,6 +137,7 @@ rule-providers:
   netflix:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/netflix.mrs}
   disney:             {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/disney.mrs}
   hbo:                {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/hbo.mrs}
+  onedrive:           {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/onedrive.mrs}
   category-games:     {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/category-games.mrs}
   connectivity-check: {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/connectivity-check.mrs}
   # fakeip_fitter_domain: {type: http, interval: 86400, behavior: domain, format: mrs, url: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/fakeip-fitter.mrs}
@@ -160,6 +161,7 @@ rules:
   - RULE-SET,download,DIRECT
   - RULE-SET,cn_domain,DIRECT
   - RULE-SET,apple-cn,DIRECT
+  - RULE-SET,onedrive,DIRECT
   - RULE-SET,geolocation-!cn,一键智能
   # IP规则
   - RULE-SET,private_ip,DIRECT,no-resolve
