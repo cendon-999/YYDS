@@ -84,7 +84,7 @@ secret: yyds666
 
 profile:
   store-selected: true
-  store-fake-ip: trueJean
+  store-fake-ip: true
   
 sniffer:
   enable: true
