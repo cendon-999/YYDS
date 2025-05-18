@@ -114,11 +114,15 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://223.6.6.6
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - quic://dns.alidns.com/dns-query
+    - https://sm2.doh.pub/dns-query 
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - quic://dns.alidns.com/dns-query
+    - https://sm2.doh.pub/dns-query
+
   fake-ip-filter:
     - rule-set:connectivity-check
     - rule-set:private_domain
