@@ -123,6 +123,7 @@ proxy-groups:
   - {name: Twitter,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/X.png}
   - {name: 电报消息,   <<: *Sel_SG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
+  - {name: 国外网站,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 新加坡智能, <<: *Smart, filter: *FilterSG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
@@ -182,7 +183,7 @@ rules:
   - RULE-SET,category-games,游戏平台
   - RULE-SET,download,DIRECT
   - RULE-SET,cn_domain,DIRECT
-  - RULE-SET,geolocation-!cn,一键智能
+  - RULE-SET,geolocation-!cn,国外网站
   - RULE-SET,private_ip,DIRECT,no-resolve
   - RULE-SET,cn_ip,DIRECT,no-resolve
   - RULE-SET,fix-direct,DIRECT
