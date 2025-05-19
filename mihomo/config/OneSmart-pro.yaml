@@ -91,8 +91,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://223.6.6.6
+    - 202.103.24.68
+    - 202.103.44.150
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -137,7 +137,7 @@ rule-providers:
   XPTV:               {type: http, interval: 86400, behavior: classical, format: yaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml}
   telegram:           {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram.mrs}
   category-ai-!cn:    {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/category-ai-!cn.mrs}
-  geolocation-!cn:    {type: http, interval: 86400, behavior: domain, format: mrs, url: https://raw.githubusercontent.com/cendon-999/YYDS/refs/heads/main/mihomo/rules/geolocation-!cn.mrs}
+  geolocation-!cn:    {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/geolocation-!cn.mrs}
   youtube:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/youtube.mrs}
   spotify:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/spotify.mrs}
   netflix:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/netflix.mrs}
