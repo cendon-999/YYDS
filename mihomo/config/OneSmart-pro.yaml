@@ -124,10 +124,10 @@ proxy-groups:
   - {name: 电报消息,   <<: *Sel_SG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
-  - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/main/IconSet/Color/Taiwan.png}
+  - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 新加坡智能, <<: *Smart, filter: *FilterSG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
   - {name: 日本智能,   <<: *Smart, filter: *FilterJP, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
-  - {name: 韩国智能,   <<: *Smart, filter: *FilterKR, icon: https://git.imee.me/https://github.com/Koolson/Taiwan.png}
+  - {name: 韩国智能,   <<: *Smart, filter: *FilterKR, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
   - {name: 美国智能,   <<: *Smart, filter: *FilterUS, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
   - {name: 欧洲智能,   <<: *Smart, filter: *FilterEU, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
 
