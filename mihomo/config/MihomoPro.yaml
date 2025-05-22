@@ -51,8 +51,8 @@ ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical,
 # 远程订阅组
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[A]为每个节点添加机场名称前缀，可自定义
 proxy-providers:
-  机场A: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[A] '}}
-  机场B: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[B] '}}
+  机场A: {<<: *PProviders, url: '机场订阅地址1', override: {additional-prefix: '[机场A] '}}
+  机场B: {<<: *PProviders, url: '机场订阅地址2', override: {additional-prefix: '[机场B] '}}
 
 # 全局配置
 mode: rule
@@ -111,8 +111,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://223.6.6.6
+    - 202.103.24.68
+    - 202.103.44.150
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -167,7 +167,7 @@ proxy-groups:
   - {name: 全球手动,   type: select, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 冷门自选,   type: select, include-all: true, filter: *FilterOther, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Europe_Map.png}
   - {name: 抖快书定位, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 欧盟策略], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Null_Nation.png}
-  - {name: 漏网之鱼,   type: select, proxies: [默认代理, DIRECT], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
+  - {name: 漏网之鱼,   type: select, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
   # 自动测速
   - {name: 香港自动,        <<: *UrlTest, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
   - {name: 台湾自动,        <<: *UrlTest, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
