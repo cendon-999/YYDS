@@ -115,10 +115,13 @@ dns:
     - 202.103.44.150
   proxy-server-nameserver:
     - quic://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query
-  nameserver:
+    - https://sm2.doh.pub/dns-query 
+  direct-nameserver:
     - quic://dns.alidns.com/dns-query
     - https://sm2.doh.pub/dns-query
+  nameserver:
+    - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
   fake-ip-filter:
     - rule-set:connectivity-check
     - rule-set:private_domain
