@@ -56,7 +56,7 @@ ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical,
 proxy-providers:
   Airport_01:
     <<: *PProviders
-    proxy: "🟢 直连"
+    proxy: "DIRECT"
     url: "订阅链接1"
     override:
       # additional-prefix: '[机场名称1]'
@@ -64,7 +64,7 @@ proxy-providers:
       udp: true
   Airport_02:
     <<: *PProviders
-    proxy: "🟢 直连"
+    proxy: "DIRECT"
     url: "订阅链接2"
     override:
       # additional-prefix: '[机场名称2]'
@@ -72,7 +72,7 @@ proxy-providers:
       udp: true
   自建:
     <<: *PProviders
-    proxy: "🟢 直连"
+    proxy: "DIRECT"
     url: "订阅链接3" # <-- 请将这里替换为您的自建节点订阅地址
     override:
       # 将此订阅的所有节点名称前统一加上 [自建] 前缀
