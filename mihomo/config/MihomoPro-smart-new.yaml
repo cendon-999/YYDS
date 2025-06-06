@@ -36,11 +36,11 @@ LoadBalanceCH: &LoadBalanceCH {type: load-balance, interval: 60, lazy: true, url
 LoadBalanceCR: &LoadBalanceCR {type: load-balance, interval: 60, lazy: true, url: 'https://www.gstatic.com/generate_204', disable-udp: false, strategy: round-robin, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 
 # 锚点 - 选择组 
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectSG: &SelectSG {type: select, proxies: [新加坡策略, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectProxy: &SelectProxy {type: select, proxies: [默认代理, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectHK: &SelectHK {type: select, proxies: [香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectSG: &SelectSG {type: select, proxies: [新加坡策略, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectProxy: &SelectProxy {type: select, proxies: [默认代理, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 # 锚点 - 规则集 
 DomainMrs: &DomainMrs {type: http, interval: 86400, behavior: domain, format: mrs}
 DomainText: &DomainText {type: http, interval: 86400, behavior: domain, format: text}
@@ -54,31 +54,8 @@ ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical,
 # 远程订阅组
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[A]为每个节点添加机场名称前缀，可自定义
 proxy-providers:
-  Airport_01:
-    <<: *PProviders
-    proxy: "🟢 直连"
-    url: "订阅链接1"
-    override:
-      # additional-prefix: '[机场名称1]'
-      skip-cert-verify: true
-      udp: true
-  Airport_02:
-    <<: *PProviders
-    proxy: "🟢 直连"
-    url: "订阅链接2"
-    override:
-      # additional-prefix: '[机场名称2]'
-      skip-cert-verify: true
-      udp: true
-  自建:
-    <<: *PProviders
-    proxy: "🟢 直连"
-    url: "订阅链接3" # <-- 请将这里替换为您的自建节点订阅地址
-    override:
-      # 将此订阅的所有节点名称前统一加上 [自建] 前缀
-      additional-prefix: '[自建]'
-      skip-cert-verify: true
-      udp: true
+  机场A: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[A] '}}
+  机场B: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[B] '}}
 
 # 全局配置
 mode: rule
@@ -137,17 +114,11 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
-    - 202.103.24.68
-    - 202.103.44.150
-  proxy-server-nameserver:
-    - quic://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query
-  direct-nameserver:
-    - quic://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query
+    - tls://223.5.5.5
+    - tls://223.6.6.6
   nameserver:
-    - https://dns.google/dns-query
-    - https://dns.cloudflare.com/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fake-ip-filter:
     - rule-set:connectivity-check
     - rule-set:private_domain
@@ -187,35 +158,35 @@ proxy-groups:
   - {name: 落地机,    type: select, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Domestic.png}
   - {name: 国内网站,  type: select, proxies: [DIRECT, 默认代理], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png}
   - {name: 国外网站,   <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
-  - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?i)(自建|CF|The_house|private|home)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
+  - {name: 🏠 自建/家宽节点, type: select, include-all: true, filter: "(?i)(自建|CF|The_house|private|home)"}
   - {name: 全球手动,   type: select, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 冷门自选,   type: select, include-all: true, filter: *FilterOther, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Europe_Map.png}
   - {name: 抖快书定位, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 欧盟策略], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Null_Nation.png}
   - {name: 漏网之鱼,   type: select, proxies: [默认代理, DIRECT], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
   # 智能测速
-  - {name: 香港智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(港|hk|hong))^(?!.*(台|日|韩|新|美|欧)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
-  - {name: 台湾智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(台|tw|taiwan))^(?!.*(港|日|韩|新|美|欧)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
-  - {name: 新加坡智能,  type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(坡|狮城|sg|singapore))^(?!.*(港|日|韩|台|美|欧)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
-  - {name: 日本智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(日|jp|japan))^(?!.*(港|台|韩|新|美|欧)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
-  - {name: 韩国智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(韩|kr|korea))^(?!.*(港|台|日|新|美|欧)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
-  - {name: 美国智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(美|us|united states))^(?!.*(港|台|日|新|韩|欧)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
-  - {name: 欧盟智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|欧))^(?!.*(港|台|日|新|韩|美)).*$', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Star.png}
+  - {name: ⭐ 香港智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(港|hk|hong))^(?!.*(台|日|韩|新|美|欧)).*$'}
+  - {name: ⭐ 台湾智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(台|tw|taiwan))^(?!.*(港|日|韩|新|美|欧)).*$'}
+  - {name: ⭐ 新加坡智能,  type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(坡|狮城|sg|singapore))^(?!.*(港|日|韩|台|美|欧)).*$'}
+  - {name: ⭐ 日本智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(日|jp|japan))^(?!.*(港|台|韩|新|美|欧)).*$'}
+  - {name: ⭐ 韩国智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(韩|kr|korea))^(?!.*(港|台|日|新|美|欧)).*$'}
+  - {name: ⭐ 美国智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(美|us|united states))^(?!.*(港|台|日|新|韩|欧)).*$'}
+  - {name: ⭐ 欧盟智能,    type: smart, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, persistent: true, include-all: true, filter: '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|欧))^(?!.*(港|台|日|新|韩|美)).*$'}
   # 稳定IP
-  - {name: 香港稳定IP,  type: fallback, proxies: [香港手动, 香港智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
-  - {name: 台湾稳定IP,  type: fallback, proxies: [台湾手动, 台湾智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
-  - {name: 新加坡稳定IP,type: fallback, proxies: [新加坡手动, 新加坡智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
-  - {name: 日本稳定IP,  type: fallback, proxies: [日本手动, 日本智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
-  - {name: 韩国稳定IP,  type: fallback, proxies: [韩国手动, 韩国智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
-  - {name: 美国稳定IP,  type: fallback, proxies: [美国手动, 美国智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
-  - {name: 欧盟稳定IP,  type: fallback, proxies: [欧盟手动, 欧盟智能], interval: 150, tolerance: 30, lazy: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/lock.png}
+  - {name: 🔒 香港稳定IP,  type: fallback, proxies: [✋ 香港手动, ⭐ 香港智能], interval: 150, tolerance: 30, lazy: false}
+  - {name: 🔒 台湾稳定IP,  type: fallback, proxies: [✋ 台湾手动, ⭐ 台湾智能], interval: 150, tolerance: 30, lazy: false}
+  - {name: 🔒 新加坡稳定IP,type: fallback, proxies: [✋ 新加坡手动, ⭐ 新加坡智能], interval: 150, tolerance: 30, lazy: false}
+  - {name: 🔒 日本稳定IP,  type: fallback, proxies: [✋ 日本手动, ⭐ 日本智能], interval: 150, tolerance: 30, lazy: false}
+  - {name: 🔒 韩国稳定IP,  type: fallback, proxies: [✋ 韩国手动, ⭐ 韩国智能], interval: 150, tolerance: 30, lazy: false}
+  - {name: 🔒 美国稳定IP,  type: fallback, proxies: [✋ 美国手动, ⭐ 美国智能], interval: 150, tolerance: 30, lazy: false}
+  - {name: 🔒 欧盟稳定IP,  type: fallback, proxies: [✋ 欧盟手动, ⭐ 欧盟智能], interval: 150, tolerance: 30, lazy: false}
   # 手动选择
-  - {name: 香港手动,    type: select, include-all: true, filter: '(?i)港|hk|hongkong|hong kong', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
-  - {name: 台湾手动,    type: select, include-all: true, filter: '(?i)台|tw|taiwan', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
-  - {name: 新加坡手动,  type: select, include-all: true, filter: '(?i)坡|狮城|sg|singapore', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
-  - {name: 日本手动,    type: select, include-all: true, filter: '(?i)日|jp|japan', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
-  - {name: 韩国手动,    type: select, include-all: true, filter: '(?i)韩|kr|korea', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
-  - {name: 美国手动,    type: select, include-all: true, filter: '(?i)美|us|united states', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
-  - {name: 欧盟手动,    type: select, include-all: true, filter: '(?i)奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|欧', icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Hand.png}
+  - {name: ✋ 香港手动,    type: select, include-all: true, filter: '(?i)港|hk|hongkong|hong kong'}
+  - {name: ✋ 台湾手动,    type: select, include-all: true, filter: '(?i)台|tw|taiwan'}
+  - {name: ✋ 新加坡手动,  type: select, include-all: true, filter: '(?i)坡|狮城|sg|singapore'}
+  - {name: ✋ 日本手动,    type: select, include-all: true, filter: '(?i)日|jp|japan'}
+  - {name: ✋ 韩国手动,    type: select, include-all: true, filter: '(?i)韩|kr|korea'}
+  - {name: ✋ 美国手动,    type: select, include-all: true, filter: '(?i)美|us|united states'}
+  - {name: ✋ 欧盟手动,    type: select, include-all: true, filter: '(?i)奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|欧'}
   # 地区策略
   - {name: 香港策略,  type: select, proxies: [香港均衡-散列, 香港均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 新加坡策略,type: select, proxies: [新加坡均衡-散列, 新加坡均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
