@@ -36,11 +36,11 @@ LoadBalanceCH: &LoadBalanceCH {type: load-balance, interval: 60, lazy: true, url
 LoadBalanceCR: &LoadBalanceCR {type: load-balance, interval: 60, lazy: true, url: 'https://www.gstatic.com/generate_204', disable-udp: false, strategy: round-robin, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 
 # 锚点 - 选择组 
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectSG: &SelectSG {type: select, proxies: [新加坡策略, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 冷门自选, 全球手动, 链式代理, DIRECT]}
-SelectProxy: &SelectProxy {type: select, proxies: [默认代理, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectHK: &SelectHK {type: select, proxies: [香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectSG: &SelectSG {type: select, proxies: [新加坡策略, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
+SelectProxy: &SelectProxy {type: select, proxies: [默认代理, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 香港稳定IP, 台湾稳定IP, 新加坡稳定IP, 日本稳定IP, 韩国稳定IP, 美国稳定IP, 欧盟稳定IP, 香港智能, 台湾智能, 新加坡智能, 日本智能, 韩国智能, 美国智能, 欧盟智能, 香港手动, 台湾手动, 新加坡手动, 日本手动, 韩国手动, 美国手动, 欧盟手动, 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 # 锚点 - 规则集 
 DomainMrs: &DomainMrs {type: http, interval: 86400, behavior: domain, format: mrs}
 DomainText: &DomainText {type: http, interval: 86400, behavior: domain, format: text}
@@ -158,6 +158,7 @@ proxy-groups:
   - {name: 落地机,    type: select, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Domestic.png}
   - {name: 国内网站,  type: select, proxies: [DIRECT, 默认代理], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png}
   - {name: 国外网站,   <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
+  - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?i)(自建|CF|The_house|private|home)", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
   - {name: 全球手动,   type: select, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 冷门自选,   type: select, include-all: true, filter: *FilterOther, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Europe_Map.png}
   - {name: 抖快书定位, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 欧盟策略], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Null_Nation.png}
@@ -212,7 +213,7 @@ proxy-groups:
   - {name: 欧盟均衡-轮询,   <<: *LoadBalanceCR, filter: *FilterEU, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
 
 # 远程规则集
-rule-providers:
+rule-providers: 
   download:                   {<<: *ClassicalYaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/download.yaml}
   location_ip:                {<<: *ClassicalYaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/location_ip.yaml}
   XPTV:                       {<<: *ClassicalYaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml}
