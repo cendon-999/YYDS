@@ -1,14 +1,14 @@
 # >>=====================================<<
-# ||                                     ||
-# ||      ██████╗  ██████╗  ██████╗      ||
-# ||      ██╔════╝ ██╔════╝ ██╔════╝      ||
-# ||      ███████╗ ███████╗ ███████╗      ||
-# ||      ██╔═══██╗██╔═══██╗██╔═══██╗      ||
-# ||      ╚██████╔╝╚██████╔╝╚██████╔╝      ||
-# ||       ╚═════╝  ╚═════╝  ╚═════╝       ||
-# ||                                     ||
+# ||                                     ||
+# ||      ██████╗  ██████╗  ██████╗      ||
+# ||      ██╔════╝ ██╔════╝ ██╔════╝      ||
+# ||      ███████╗ ███████╗ ███████╗      ||
+# ||      ██╔═══██╗██╔═══██╗██╔═══██╗      ||
+# ||      ╚██████╔╝╚██████╔╝╚██████╔╝      ||
+# ||       ╚═════╝  ╚═════╝  ╚═════╝       ||
+# ||                                     ||
 # >>=====================================<<
-# 名称: MihomoPro高大全 
+# 名称: MihomoPro高大全
 # 日期: 2025 年 6月 7 日
 # 地址: https://github.com/666OS
 # 频道: https://t.me/Pinched666
@@ -19,7 +19,7 @@
 # 锚点 - 远程订阅组
 PProviders: &PProviders {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.gstatic.com/generate_204', interval: 600}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
-# 锚点 - 筛选组 
+# 锚点 - 筛选组
 FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
 FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
 FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$'
@@ -41,14 +41,14 @@ SmartTest: &SmartTest {type: smart, url: 'https://www.gstatic.com/generate_204',
 StableIP: &StableIP {type: fallback, interval: 150, tolerance: 30, lazy: false}
 
 
-# 锚点 - 选择组 
+# 锚点 - 选择组
 SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 SelectHK: &SelectHK {type: select, proxies: [香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 SelectSG: &SelectSG {type: select, proxies: [新加坡策略, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 SelectProxy: &SelectProxy {type: select, proxies: [默认代理, 故障转移, 香港策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 🔒 香港稳定IP, 🔒 台湾稳定IP, 🔒 新加坡稳定IP, 🔒 日本稳定IP, 🔒 韩国稳定IP, 🔒 美国稳定IP, 🔒 欧盟稳定IP, ⭐ 香港智能, ⭐ 台湾智能, ⭐ 新加坡智能, ⭐ 日本智能, ⭐ 韩国智能, ⭐ 美国智能, ⭐ 欧盟智能, ✋ 香港手动, ✋ 台湾手动, ✋ 新加坡手动, ✋ 日本手动, ✋ 韩国手动, ✋ 美国手动, ✋ 欧盟手动, 🏠 自建/家宽节点, 冷门自选, 全球手动, 链式代理, DIRECT]}
 
-# 锚点 - 规则集 
+# 锚点 - 规则集
 DomainMrs: &DomainMrs {type: http, interval: 86400, behavior: domain, format: mrs}
 DomainText: &DomainText {type: http, interval: 86400, behavior: domain, format: text}
 domainYaml: &domainYaml {type: http, interval: 86400, behavior: domain, format: yaml}
@@ -56,7 +56,7 @@ IPcidrMrs: &IPcidrMrs {type: http, interval: 86400, behavior: ipcidr, format: mr
 IPcidrText: &IPcidrText {type: http, interval: 86400, behavior: ipcidr, format: text}
 ClassicalText: &ClassicalText {type: http, interval: 86400, behavior: classical, format: text}
 ClassicalYaml: &ClassicalYaml {type: http, interval: 86400, behavior: classical, format: yaml}
-############################################## - ⚓️ 锚点区结束 - ############################################## 
+############################################## - ⚓️ 锚点区结束 - ##############################################
 
 # 远程订阅组
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[A]为每个节点添加机场名称前缀，可自定义
@@ -111,7 +111,7 @@ skip-auth-prefixes:
   - 192.168.31.0/24
   - 192.168.100.0/24
   - 127.0.0.1/8
- 
+
 external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
 external-ui-name: zashboard
 external-ui: ui
@@ -121,7 +121,7 @@ secret: yyds666
 profile:
   store-selected: true
   store-fake-ip: true
- 
+
 sniffer:
   enable: true
   override-destination: false
@@ -137,7 +137,7 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
-   
+
 dns:
   enable: true
   ipv6: true
@@ -165,7 +165,7 @@ dns:
     - +.push.apple.com
     - beiyong.dynuddns.net
 
-# 策略组 
+# 策略组
 proxy-groups:
   - {name: 默认代理, <<: *SelectFB, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Static.png}
   - {name: AI平台, <<: *SelectUS, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
@@ -201,50 +201,22 @@ proxy-groups:
   - {name: 漏网之鱼, <<: *SelectProxy, include-all: true, filter: *FilterAll, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
 
   # --- [MODIFIED] 智能测速 ---
-  - name: ⭐ 香港智能
-    <<: *SmartTest
-    filter: *FilterHK
-  - name: ⭐ 台湾智能
-    <<: *SmartTest
-    filter: *FilterTW
-  - name: ⭐ 新加坡智能
-    <<: *SmartTest
-    filter: *FilterSG
-  - name: ⭐ 日本智能
-    <<: *SmartTest
-    filter: *FilterJP
-  - name: ⭐ 韩国智能
-    <<: *SmartTest
-    filter: *FilterKR
-  - name: ⭐ 美国智能
-    <<: *SmartTest
-    filter: *FilterUS
-  - name: ⭐ 欧盟智能
-    <<: *SmartTest
-    filter: *FilterEU
+  - {name: ⭐ 香港智能, <<: *SmartTest, filter: *FilterHK}
+  - {name: ⭐ 台湾智能, <<: *SmartTest, filter: *FilterTW}
+  - {name: ⭐ 新加坡智能, <<: *SmartTest, filter: *FilterSG}
+  - {name: ⭐ 日本智能, <<: *SmartTest, filter: *FilterJP}
+  - {name: ⭐ 韩国智能, <<: *SmartTest, filter: *FilterKR}
+  - {name: ⭐ 美国智能, <<: *SmartTest, filter: *FilterUS}
+  - {name: ⭐ 欧盟智能, <<: *SmartTest, filter: *FilterEU}
 
   # --- [MODIFIED] 稳定IP ---
-  - name: 🔒 香港稳定IP
-    <<: *StableIP
-    proxies: [✋ 香港手动, ⭐ 香港智能]
-  - name: 🔒 台湾稳定IP
-    <<: *StableIP
-    proxies: [✋ 台湾手动, ⭐ 台湾智能]
-  - name: 🔒 新加坡稳定IP
-    <<: *StableIP
-    proxies: [✋ 新加坡手动, ⭐ 新加坡智能]
-  - name: 🔒 日本稳定IP
-    <<: *StableIP
-    proxies: [✋ 日本手动, ⭐ 日本智能]
-  - name: 🔒 韩国稳定IP
-    <<: *StableIP
-    proxies: [✋ 韩国手动, ⭐ 韩国智能]
-  - name: 🔒 美国稳定IP
-    <<: *StableIP
-    proxies: [✋ 美国手动, ⭐ 美国智能]
-  - name: 🔒 欧盟稳定IP
-    <<: *StableIP
-    proxies: [✋ 欧盟手动, ⭐ 欧盟智能]
+  - {name: 🔒 香港稳定IP, <<: *StableIP, proxies: [✋ 香港手动, ⭐ 香港智能]}
+  - {name: 🔒 台湾稳定IP, <<: *StableIP, proxies: [✋ 台湾手动, ⭐ 台湾智能]}
+  - {name: 🔒 新加坡稳定IP, <<: *StableIP, proxies: [✋ 新加坡手动, ⭐ 新加坡智能]}
+  - {name: 🔒 日本稳定IP, <<: *StableIP, proxies: [✋ 日本手动, ⭐ 日本智能]}
+  - {name: 🔒 韩国稳定IP, <<: *StableIP, proxies: [✋ 韩国手动, ⭐ 韩国智能]}
+  - {name: 🔒 美国稳定IP, <<: *StableIP, proxies: [✋ 美国手动, ⭐ 美国智能]}
+  - {name: 🔒 欧盟稳定IP, <<: *StableIP, proxies: [✋ 欧盟手动, ⭐ 欧盟智能]}
 
   # --- 手动选择 ---
   - {name: ✋ 香港手动, type: select, include-all: true, filter: *FilterHK}
@@ -254,7 +226,7 @@ proxy-groups:
   - {name: ✋ 韩国手动, type: select, include-all: true, filter: *FilterKR}
   - {name: ✋ 美国手动, type: select, include-all: true, filter: *FilterUS}
   - {name: ✋ 欧盟手动, type: select, include-all: true, filter: *FilterEU}
-    
+
   # --- 地区策略 ---
   - {name: 香港策略, type: select, proxies: [香港均衡-散列, 香港均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 新加坡策略,type: select, proxies: [新加坡均衡-散列, 新加坡均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
@@ -263,7 +235,7 @@ proxy-groups:
   - {name: 美国策略, type: select, proxies: [美国均衡-散列, 美国均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
   - {name: 台湾策略, type: select, proxies: [台湾均衡-散列, 台湾均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 欧盟策略, type: select, proxies: [欧盟均衡-散列, 欧盟均衡-轮询], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
-    
+
   # --- 负载均衡-散列 ---
   - {name: 香港均衡-散列, <<: *LoadBalanceCH, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
   - {name: 台湾均衡-散列, <<: *LoadBalanceCH, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
@@ -272,7 +244,7 @@ proxy-groups:
   - {name: 韩国均衡-散列, <<: *LoadBalanceCH, filter: *FilterKR, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
   - {name: 美国均衡-散列, <<: *LoadBalanceCH, filter: *FilterUS, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
   - {name: 欧盟均衡-散列, <<: *LoadBalanceCH, filter: *FilterEU, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
-    
+
   # --- 负载均衡-轮询 ---
   - {name: 香港均衡-轮询, <<: *LoadBalanceCR, filter: *FilterHK, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
   - {name: 台湾均衡-轮询, <<: *LoadBalanceCR, filter: *FilterTW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
@@ -283,7 +255,7 @@ proxy-groups:
   - {name: 欧盟均衡-轮询, <<: *LoadBalanceCR, filter: *FilterEU, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
 
 # 远程规则集
-rule-providers: 
+rule-providers:
   download: {<<: *ClassicalYaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/download.yaml}
   location_ip: {<<: *ClassicalYaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/location_ip.yaml}
   XPTV: {<<: *ClassicalYaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml}
