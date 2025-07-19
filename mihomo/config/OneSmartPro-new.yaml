@@ -265,9 +265,9 @@ rule-providers:
   # Domain规则集 - 域名规则
   telegram:           {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram.mrs}
   category-ai-!cn:    {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/category-ai-!cn.mrs}
-  emby:               {<<: *ClassicalText, url: https://raw.githubusercontent.com/cendon-999/Rules/refs/heads/main/rules/Domain/emby.list}
-  Emby_domain-2:      {<<: *ClassicalText, url: https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/rules/emby.list}
-  Emby_domain-3:      {<<: *ClassicalText, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.list}
+  emby:               {<<: *BehaviorCL, url: https://raw.githubusercontent.com/cendon-999/Rules/refs/heads/main/rules/Domain/emby.list}
+  Emby_domain-2:      {<<: *BehaviorCL, url: https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/rules/emby.list}
+  Emby_domain-3:      {<<: *BehaviorCL, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.list}
   Emby_domain-4:      {<<: *ClassicalText, url: https://raw.githubusercontent.com/ddgksf2013/Filter/refs/heads/master/Emby.list}
   youtube:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/youtube.mrs}
   spotify:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/spotify.mrs}
