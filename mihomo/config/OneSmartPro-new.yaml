@@ -174,9 +174,10 @@ proxy-groups:
   - {name: Netflix,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
   - {name: Disney,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Disney.png}
   - {name: HBO,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/HBO.png} 
-  - {name: 国际媒体,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 苹果服务,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
   - {name: 谷歌服务,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png}
+  - {name: GitHub,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png}
+  - {name: OneDrive,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/OneDrive.png}
   - {name: 微软服务,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png}
   - {name: 国外流量,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
   - {name: 国内流量,  <<: *SelectDC, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png}
@@ -225,8 +226,8 @@ rules:
   - RULE-SET,apple-cn,国内流量
   - RULE-SET,apple,苹果服务
   - RULE-SET,google,谷歌服务
-  - RULE-SET,github,微软服务
-  - RULE-SET,onedrive,微软服务
+  - RULE-SET,github,GitHub
+  - RULE-SET,onedrive,OneDrive
   - RULE-SET,microsoft,微软服务
   - RULE-SET,download,国内流量
   - RULE-SET,cn_domain,国内流量
