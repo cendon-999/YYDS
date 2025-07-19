@@ -223,7 +223,7 @@ rules:
   - RULE-SET,emby,Emby
   - RULE-SET,Emby_domain-2,Emby
   - RULE-SET,Emby_domain-3,Emby
-  - RULE-SET,Emby_domain-4,Emby
+  #- RULE-SET,Emby_domain-4,Emby
   - RULE-SET,youtube,油管视频
   - RULE-SET,spotify,Spotify
   - RULE-SET,netflix,Netflix
@@ -268,7 +268,7 @@ rule-providers:
   emby:               {<<: *BehaviorCL, url: https://raw.githubusercontent.com/cendon-999/Rules/refs/heads/main/rules/Domain/emby.list}
   Emby_domain-2:      {<<: *BehaviorCL, url: https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/rules/emby.list}
   Emby_domain-3:      {<<: *BehaviorCL, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.list}
-  Emby_domain-4:      {<<: *BehaviorCL, url: https://raw.githubusercontent.com/ddgksf2013/Filter/refs/heads/master/Emby.list}
+  #Emby_domain-4:      {<<: *BehaviorCL, url: https://raw.githubusercontent.com/ddgksf2013/Filter/refs/heads/master/Emby.list}
   youtube:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/youtube.mrs}
   spotify:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/spotify.mrs}
   netflix:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/netflix.mrs}
