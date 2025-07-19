@@ -145,11 +145,11 @@ dns:
     - 119.29.29.29
     - 180.184.1.1
     - 223.5.5.5
-  proxy-server-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
-  direct-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
+  #proxy-server-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
+  #direct-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - 202.103.24.68
+    - 202.103.44.150
   fake-ip-filter:
     - rule-set:connectivity-check
     - rule-set:private_domain
@@ -170,6 +170,10 @@ proxy-groups:
   - {name: 网速测试,  <<: *OneSmart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Speedtest.png, include-all: true}
   - {name: 电报消息,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 油管视频,  <<: *SelectLR, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
+  - {name: Spotify,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Spotify.png}
+  - {name: Netflix,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: Disney,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Disney.png}
+  - {name: HBO,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/HBO.png} 
   - {name: 国际媒体,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 苹果服务,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
   - {name: 谷歌服务,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png}
@@ -214,10 +218,10 @@ rules:
   - RULE-SET,category-ai-!cn,人工智能
   - RULE-SET,telegram,电报消息
   - RULE-SET,youtube,油管视频
-  - RULE-SET,spotify,国际媒体
-  - RULE-SET,netflix,国际媒体
-  - RULE-SET,disney,国际媒体
-  - RULE-SET,hbo,国际媒体
+  - RULE-SET,spotify,Spotify
+  - RULE-SET,netflix,Netflix
+  - RULE-SET,disney,Disney
+  - RULE-SET,hbo,HBO
   - RULE-SET,apple-cn,国内流量
   - RULE-SET,apple,苹果服务
   - RULE-SET,google,谷歌服务
