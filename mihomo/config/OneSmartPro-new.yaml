@@ -57,7 +57,7 @@ proxy-providers:
   # 自建订阅源 - 自建节点集合，使用时请修改
   聚合服务商: {<<: *BaseProvider, url: '自建订阅源地址', override: {additional-prefix: '[自建] '}}
   # 中转订阅源 - 中转服务连接，使用时请修改
-  中转服务商: {<<: *BaseProvider, url: '中转订阅源地址', override: {additional-prefix: '[中] ', dialer-proxy: 中转服务}}
+  #中转服务商: {<<: *BaseProvider, url: '中转订阅源地址', override: {additional-prefix: '[中] ', dialer-proxy: 中转服务}}
 
 # ==================== 监听器 ====================
 listeners:
