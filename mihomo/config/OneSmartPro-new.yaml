@@ -167,6 +167,7 @@ proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
   - {name: 一键智能,  <<: *SelectAL, icon: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
   - {name: 人工智能,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
+  - {name: Emby,     <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png}
   - {name: 网速测试,  <<: *OneSmart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Speedtest.png, include-all: true}
   - {name: 电报消息,  <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 油管视频,  <<: *SelectLR, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
@@ -179,6 +180,7 @@ proxy-groups:
   - {name: GitHub,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png}
   - {name: OneDrive,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/OneDrive.png}
   - {name: 微软服务,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png}
+  - {name: 游戏平台,  <<: *SelectProxy, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
   - {name: 国外流量,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
   - {name: 国内流量,  <<: *SelectDC, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png}
   - {name: 兜底流量,  <<: *SelectHQ, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
@@ -218,6 +220,10 @@ rules:
   # 应用规则 - 按场景分流
   - RULE-SET,category-ai-!cn,人工智能
   - RULE-SET,telegram,电报消息
+  - RULE-SET,emby,Emby
+  - RULE-SET,Emby_domain-2,Emby
+  - RULE-SET,Emby_domain-3,Emby
+  - RULE-SET,Emby_domain-4,Emby
   - RULE-SET,youtube,油管视频
   - RULE-SET,spotify,Spotify
   - RULE-SET,netflix,Netflix
@@ -229,6 +235,7 @@ rules:
   - RULE-SET,github,GitHub
   - RULE-SET,onedrive,OneDrive
   - RULE-SET,microsoft,微软服务
+  - RULE-SET,category-games,游戏平台
   - RULE-SET,download,国内流量
   - RULE-SET,cn_domain,国内流量
   - RULE-SET,geolocation-!cn,国外流量
@@ -258,6 +265,10 @@ rule-providers:
   # Domain规则集 - 域名规则
   telegram:           {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram.mrs}
   category-ai-!cn:    {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/category-ai-!cn.mrs}
+  emby:               {<<: *ClassicalText, url: https://raw.githubusercontent.com/cendon-999/Rules/refs/heads/main/rules/Domain/emby.list}
+  Emby_domain-2:      {<<: *ClassicalText, url: https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/rules/emby.list}
+  Emby_domain-3:      {<<: *ClassicalText, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.list}
+  Emby_domain-4:      {<<: *ClassicalText, url: https://raw.githubusercontent.com/ddgksf2013/Filter/refs/heads/master/Emby.list}
   youtube:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/youtube.mrs}
   spotify:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/spotify.mrs}
   netflix:            {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/netflix.mrs}
@@ -269,7 +280,8 @@ rule-providers:
   google:             {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/google.mrs}
   github:             {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/github.mrs}
   onedrive:           {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/onedrive.mrs}
-  microsoft:          {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/microsoft.mrs}  
+  microsoft:          {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/microsoft.mrs}
+  category-games:     {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/category-games.mrs}
   connectivity-check: {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/connectivity-check.mrs}
   private_domain:     {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/private.mrs}
   geolocation-!cn:    {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/geolocation-!cn.mrs}
