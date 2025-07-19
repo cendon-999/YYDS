@@ -28,7 +28,7 @@ BaseLB: &BaseLB       {type: load-balance, interval: 200, lazy: true, url: 'http
 BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www.gstatic.com/generate_204', hidden: true, uselightgbm: true}
 
 # 节点筛选正则表达式 - 基于地理位置和关键词过滤
-FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
+FilterHK: &FilterHK ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(俄罗斯|Russia|РФ|🇷🇺|德国|Deutschland|🇩🇪|土耳其|Türkiye|Turkiye|🇹🇷|英国|United Kingdom|UK|Britain|England|🇬🇧|摩尔多瓦|Moldova|MDA|🇲🇩)).*$
 FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
 FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$'
 FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
