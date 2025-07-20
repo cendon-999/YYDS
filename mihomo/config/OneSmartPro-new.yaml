@@ -220,6 +220,7 @@ rules:
   - DOMAIN-KEYWORD,diabrowser,人工智能
 
   # 应用规则 - 按场景分流
+  - RULE-SET,speedtest,网速测试
   - RULE-SET,category-ai-!cn,人工智能
   - RULE-SET,telegram,电报消息
   - RULE-SET,emby,Emby
@@ -263,6 +264,7 @@ rule-providers:
   download:           {<<: *BehaviorCL, format: yaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/download.yaml}
   fix-direct:         {<<: *BehaviorCL, format: yaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/fix-direct.yaml}
   XPTV:               {<<: *BehaviorCL, format: yaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml}
+  speedtest:          {<<: *BehaviorCL, format: yaml, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/speedtest.yaml}
 
   # Domain规则集 - 域名规则
   telegram:           {<<: *BehaviorDN, format: mrs, url: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram.mrs}
