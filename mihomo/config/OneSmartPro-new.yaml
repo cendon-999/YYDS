@@ -58,6 +58,7 @@ proxy-providers:
   聚合服务商: {<<: *BaseProvider, url: '自建订阅源地址', override: {additional-prefix: '[自建] '}}
   # 中转订阅源 - 中转服务连接，使用时请修改
   中转服务商: {<<: *BaseProvider, url: '中转订阅源地址', override: {additional-prefix: '[中] ', dialer-proxy: 中转服务}}
+  
 # ==================== 监听器 ====================
 listeners:
   # Shadowsocks监听器 - 代理节点 玩法：远程连接家庭网络，端口和密码，使用时请修改
@@ -160,9 +161,16 @@ dns:
     - +.push.apple.com
 
 # ==================== 代理策略组 ====================
+# 代理配置
 proxies:
-  - {name: 直接连接, type: direct, udp: true}
-
+  - name: 直接连接
+    type: direct
+    udp: true
+  - name: Tor
+    type: socks5
+    server: 127.0.0.1
+    port: 9050
+    
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
   - {name: 一键智能,  <<: *SelectAL, icon: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
@@ -214,6 +222,7 @@ rules:
   - DOMAIN-SUFFIX,imee.me,直接连接
   - RULE-SET,fix-direct,直接连接
   - RULE-SET,XPTV,直接连接
+  - DOMAIN-SUFFIX, onion, Tor
 
   # 修正规则 - 特定服务代理
   - DOMAIN-KEYWORD,behance,美国智能
