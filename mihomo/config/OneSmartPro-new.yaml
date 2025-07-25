@@ -222,7 +222,7 @@ rules:
   - DOMAIN-SUFFIX,imee.me,直接连接
   - RULE-SET,fix-direct,直接连接
   - RULE-SET,XPTV,直接连接
-  - DOMAIN-SUFFIX, onion, Tor
+  #- DOMAIN-SUFFIX, onion, Tor
 
   # 修正规则 - 特定服务代理
   - DOMAIN-KEYWORD,behance,美国智能
