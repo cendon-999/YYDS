@@ -166,10 +166,10 @@ proxies:
   - name: 直接连接
     type: direct
     udp: true
-  - name: Tor
-    type: socks5
-    server: 127.0.0.1
-    port: 9050
+  #- name: Tor
+    #type: socks5
+    #server: 127.0.0.1
+    #port: 9050
     
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
