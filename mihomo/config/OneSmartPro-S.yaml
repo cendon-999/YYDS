@@ -161,7 +161,13 @@ dns:
 
 # ==================== 代理策略组 ====================
 proxies:
-  - {name: 直接连接, type: direct, udp: true}
+  - name: 直接连接
+    type: direct
+    udp: true
+  - name: Tor
+    type: socks5
+    server: 127.0.0.1
+    port: 9050
 
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
@@ -217,6 +223,7 @@ rules:
   - RULE-SET,XPTV,直接连接
   - RULE-SET,AppleCN,直接连接
   - RULE-SET,AI,人工智能
+  - DOMAIN-SUFFIX, onion, Tor
   - DOMAIN-KEYWORD,speedtest,网络测试
   - RULE-SET,Speedtest,网络测试
   - RULE-SET,Telegram,电报消息
