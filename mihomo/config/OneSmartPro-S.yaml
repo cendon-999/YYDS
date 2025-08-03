@@ -226,6 +226,7 @@ rules:
   - DOMAIN-SUFFIX,onion,Tor
   - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - DOMAIN-SUFFIX,prod.cdni.callofduty.com,游戏节点
+  - DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com,游戏节点
   - DOMAIN-KEYWORD,speedtest,网络测试
   - RULE-SET,Speedtest,网络测试
   - RULE-SET,Telegram,电报消息
