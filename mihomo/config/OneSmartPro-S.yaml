@@ -223,7 +223,8 @@ rules:
   - RULE-SET,XPTV,直接连接
   - RULE-SET,AppleCN,直接连接
   - RULE-SET,AI,人工智能
-  - DOMAIN-SUFFIX, onion, Tor
+  - DOMAIN-SUFFIX,onion,Tor
+  - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - DOMAIN-KEYWORD,speedtest,网络测试
   - RULE-SET,Speedtest,网络测试
   - RULE-SET,Telegram,电报消息
