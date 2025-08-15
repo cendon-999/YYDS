@@ -29,7 +29,7 @@ BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www
 
 # 节点筛选正则表达式 - 基于地理位置和关键词过滤
 FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(法国|欧港专线|俄罗斯|Russia|РФ|🇷🇺|德国|Deutschland|🇩🇪|土耳其|Türkiye|Turkiye|🇹🇷|英国|United Kingdom|UK|Britain|England|🇬🇧|摩尔多瓦|Moldova|MDA|🇲🇩)).*$'
-FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2)).*$'
+FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|SIN|XSP))(?!.*(排除1|排除2)).*$'
 FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|尼日利亚|Nigeria)).*$'
 FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|乌克兰|Ukraine|南非|South Africa)).*$'
 FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x|澳大利亚|Australia|亚美尼亚|俄罗斯|Russia)).*$'
@@ -148,8 +148,10 @@ dns:
   proxy-server-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
   direct-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - 202.103.24.68
+    - 202.103.44.150
+    #- https://dns.alidns.com/dns-query
+    #- https://doh.pub/dns-query
   fake-ip-filter:
     - rule-set:ConnCheck
     - rule-set:Private
@@ -203,7 +205,7 @@ proxy-groups:
   - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?=.*(?i)(自建|The_house|private|home))", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
   
   # 中转服务层 - LoadBalance负载均衡，提供中转服务提升连通性，选用一个或多个服务商做中转，比如 优质服务商，可通过正则表达式，过滤掉不需要的节点，使用时请修改
-  - {name: 中转服务,  <<: *BaseLB, use: [优质服务商], filter: '香港', hidden: true, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
+  - {name: 中转服务,  <<: *BaseLB, use: [备用服务商], filter: '香港', hidden: true, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
 
 # ==================== 规则路由 ====================
 rules: 
