@@ -29,7 +29,7 @@ BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www
 
 # 节点筛选正则表达式 - 基于地理位置和关键词过滤
 FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(法国|欧港专线|俄罗斯|Russia|РФ|🇷🇺|德国|Deutschland|🇩🇪|土耳其|Türkiye|Turkiye|🇹🇷|英国|United Kingdom|UK|Britain|England|🇬🇧|摩尔多瓦|Moldova|MDA|🇲🇩)).*$'
-FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|SIN|XSP))(?!.*(排除1|排除2)).*$'
+FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|XSP))(?!.*(排除1|排除2)).*$'
 FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|尼日利亚|Nigeria)).*$'
 FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|乌克兰|Ukraine|南非|South Africa)).*$'
 FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x|澳大利亚|Australia|亚美尼亚|俄罗斯|Russia)).*$'
