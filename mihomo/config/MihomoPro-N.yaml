@@ -27,23 +27,23 @@ BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://ww
 BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.gstatic.com/generate_204', hidden: true}
 
 # 节点筛选正则表达式 - 基于地理位置和关键词过滤
-FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
-FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
-FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$'
-FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
-FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$'
-FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$'
+FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(法国|欧港专线|俄罗斯|Russia|РФ|🇷🇺|德国|Deutschland|🇩🇪|土耳其|Türkiye|Turkiye|🇹🇷|英国|United Kingdom|UK|Britain|England|🇬🇧|摩尔多瓦|Moldova|MDA|🇲🇩)).*$'
+FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|XSP))(?!.*(排除1|排除2)).*$'
+FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|尼日利亚|Nigeria)).*$'
+FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|乌克兰|Ukraine|南非|South Africa)).*$'
+FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x|澳大利亚|Australia|亚美尼亚|俄罗斯|Russia)).*$'
+FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2)).*$'
 FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接]}
-SelectPY: &SelectPY {type: select, proxies: [默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 故障转移, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接]}
-SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接, 自建/家宽节点]}
+SelectPY: &SelectPY {type: select, proxies: [默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接, 自建/家宽节点]}
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 自建/家宽节点]}
+SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 故障转移, 狮城策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接, 自建/家宽节点]}
+SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 故障转移, 香港策略, 日本策略, 韩国策略, 美国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接, 自建/家宽节点]}
+SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 故障转移, 香港策略, 狮城策略, 日本策略, 韩国策略, 台湾策略, 欧盟策略, 冷门自选, 全球手动, 链式代理, 直接连接, 自建/家宽节点]}
 
 # ==================== 代理提供者 ====================
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[优][备]为每个节点添加机场名称前缀，可自定义
@@ -128,9 +128,13 @@ dns:
     - 119.29.29.29
     - 180.184.1.1
     - 223.5.5.5
+  proxy-server-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
+  direct-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
   nameserver:
+    #- 202.103.24.68
+    #- 202.103.44.150
     - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    #- https://doh.pub/dns-query
   fake-ip-filter:
     - rule-set:ConnCheck
     - rule-set:Private
@@ -139,6 +143,10 @@ dns:
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
+    - '*.playstation.net'
+    - '*.playstation.com'
+    - '*.playstationnetwork.com'
+    - '*.sonyentertainmentnetwork.com'
 
 # ==================== 代理策略组 ====================
 proxy-groups:
@@ -158,7 +166,7 @@ proxy-groups:
   - {name: Emby服,      <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png}
   - {name: 油管视频,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
   - {name: 奈飞视频,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
-  - {name: 国际媒体,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
+  - {name: 视频媒体,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 新闻媒体,     <<: *SelectUS, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_News.png}
 
   # ==================== 社交平台 ====================
@@ -218,11 +226,15 @@ proxy-groups:
   - {name: 欧盟均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterEU, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
 
   #- {name: 游戏节点,  <<: &SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png, include-all: true}
-  #- {name: 自建/家宽节点, type: select, include-all: true, filter: "(?=.*(?i)(自建|The_house|private|home))", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
+  - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?=.*(?i)(自建|The_house|private|home))", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
   
 # ==================== 规则路由 ====================
 rules: 
   # 拦截规则
+  - DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com,游戏节点
+  #- DOMAIN-SUFFIX,genesis.stun.us.demonware.net,游戏节点
+  #- DOMAIN-SUFFIX,sapphire-lobby.prod.demonware.net,游戏节点
+  - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - RULE-SET,Tracking,REJECT
   - RULE-SET,Advertising,REJECT
 
@@ -239,13 +251,13 @@ rules:
   - RULE-SET,Twitter,推特社交
   - RULE-SET,Telegram,电报消息
   - RULE-SET,SocialMedia,社交平台
-  - RULE-SET,NewsMedia,新闻媒体
+  - RULE-SET,NewsMedia,视频媒体
   - RULE-SET,Games,游戏平台
   - RULE-SET,Crypto,货币平台
   - RULE-SET,Emby,Emby服
   - RULE-SET,Netflix,奈飞视频
   - RULE-SET,YouTube,油管视频
-  - RULE-SET,Streaming,国际媒体
+  - RULE-SET,Streaming,视频媒体
   - RULE-SET,Apple,苹果服务 
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Microsoft,微软服务
@@ -261,7 +273,7 @@ rules:
   - RULE-SET,SocialMediaIP,社交平台,no-resolve
   - RULE-SET,EmbyIP,Emby服,no-resolve
   - RULE-SET,NetflixIP,奈飞视频,no-resolve
-  - RULE-SET,StreamingIP,国际媒体,no-resolve
+  - RULE-SET,StreamingIP,视频媒体,no-resolve
   - RULE-SET,GoogleIP,谷歌服务,no-resolve
   - RULE-SET,ProxyIP,国外流量,no-resolve
   - RULE-SET,ChinaIP,国内流量,no-resolve
