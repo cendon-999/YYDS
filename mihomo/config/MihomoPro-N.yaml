@@ -118,10 +118,10 @@ dns:
   proxy-server-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
   direct-nameserver: [quic://dns.alidns.com/dns-query, https://sm2.doh.pub/dns-query]
   nameserver:
-    - https://doh.cmliussss.hidns.co:2087
+    #- https://doh.cmliussss.hidns.co:2087
     #- 202.103.24.68
     #- 202.103.44.150
-    #- https://dns.alidns.com/dns-query
+    - https://dns.alidns.com/dns-query
     #- https://doh.pub/dns-query
   fake-ip-filter:
     - rule-set:ConnCheck
