@@ -42,6 +42,20 @@ proxy-providers:
   聚合服务商: {<<: *BaseProvider, url: '自建订阅源地址', override: {additional-prefix: '[自建] '}}
   # 落地订阅源 - 落地服务连接，使用时请修改
   落地服务商: {<<: *BaseProvider, url: '中转订阅源地址', override: {additional-prefix: '[落] '}}
+
+  # ==================== 监听器 ====================
+listeners:
+  # Shadowsocks监听器 - 代理节点 玩法：远程连接家庭网络，端口和密码，使用时请修改
+  - {name: SS-IN,  type: shadowsocks, listen: '::', port: 10000, udp: true, password: Xf6#Lp3WqZ, cipher: aes-256-gcm}
+  # Mixed监听器 - 分地区专用端口 玩法：本地浏览器插件或手机APP配置代理，实现分地区访问
+  - {name: MIXED-SG, type: mixed, port: 50000, proxy: 狮城智能}
+  - {name: MIXED-US, type: mixed, port: 50001, proxy: 美国智能}
+  - {name: MIXED-TW, type: mixed, port: 50002, proxy: 台湾智能}
+  - {name: MIXED-HK, type: mixed, port: 50003, proxy: 香港智能}
+  - {name: MIXED-JP, type: mixed, port: 50004, proxy: 日本智能}
+  - {name: MIXED-KR, type: mixed, port: 50005, proxy: 韩国智能}
+  - {name: MIXED-EU, type: mixed, port: 50006, proxy: 欧洲智能}
+  - {name: MIXED-AL, type: mixed, port: 50007, proxy: 一键智能}
   
 # ==================== 核心配置 ====================
 # 基础配置
@@ -139,7 +153,9 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    - https://doh.cmliussss.hidns.co:2087
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    #- https://doh.cmliussss.hidns.co:2087
     #- 202.103.24.68
     #- 202.103.44.150
     #- https://dns.alidns.com/dns-query
@@ -189,6 +205,7 @@ proxy-groups:
   - {name: 人工智能,     <<: *SelectUS, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png, include-all: true, filter: *FilterAL}
   - {name: 货币平台,     <<: *SelectSG, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Bitcloud.png}
   - {name: 游戏平台,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
+  - {name: Github,       <<: *SelectPY, icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github(1).png}
   - {name: 微软服务,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png}
   - {name: 谷歌服务,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png}
   - {name: 苹果服务,     <<: *SelectPY, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
@@ -273,6 +290,7 @@ rules:
   - RULE-SET,Telegram,电报消息
   - RULE-SET,SocialMedia,社交平台
   - RULE-SET,NewsMedia,新闻媒体
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
   - RULE-SET,Games,游戏平台
   - RULE-SET,Crypto,货币平台
   - RULE-SET,Emby,Emby服
@@ -281,6 +299,7 @@ rules:
   - RULE-SET,Streaming,视频媒体
   - RULE-SET,Apple,苹果服务 
   - RULE-SET,Google,谷歌服务
+  - RULE-SET,github,Github
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Proxy,国外流量
   - RULE-SET,China,国内流量
@@ -308,6 +327,7 @@ BehaviorDN: &BehaviorDN {type: http, behavior: domain, format: mrs, interval: 86
 BehaviorDY: &BehaviorDY {type: http, behavior: domain, format: yaml, interval: 86400}
 BehaviorIP: &BehaviorIP {type: http, behavior: ipcidr, format: mrs, interval: 86400}
 ClassicalText: &ClassicalText {type: http, interval: 86400, behavior: classical, format: text}
+ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 3600, format: yaml, proxy: DIRECT}
 
 # 规则提供者
 rule-providers:  
@@ -357,6 +377,8 @@ rule-providers:
 
   # 广告规则
   AWAvenueAds:    {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
+  
+  github:          {<<: *ClassicalYaml, url: https://rule.kelee.one/Clash/GitHub.yaml}
   # 其他规则
   fakeip-filter:  {<<: *BehaviorDN, url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"}
 
