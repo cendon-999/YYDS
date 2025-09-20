@@ -153,11 +153,10 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
-    #- https://doh.cmliussss.hidns.co:2087
-    #- 202.103.24.68
-    #- 202.103.44.150
+    - https://doh.zaoy.cn/google
+    - https://doh.zaoy.cn/cloudflare
+    #- https://dns.google/dns-query
+    #- https://cloudflare-dns.com/dns-query
     #- https://dns.alidns.com/dns-query
     #- https://doh.pub/dns-query
   fake-ip-filter:
