@@ -153,8 +153,10 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    - https://doh.zaoy.cn/google
-    - https://doh.zaoy.cn/cloudflare
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+    #- https://doh.zaoy.cn/google
+    #- https://doh.zaoy.cn/cloudflare
     #- https://dns.google/dns-query
     #- https://cloudflare-dns.com/dns-query
     #- https://dns.alidns.com/dns-query
