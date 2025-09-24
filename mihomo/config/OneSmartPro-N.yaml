@@ -262,43 +262,43 @@ ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 3600, 
 # 规则提供者
 rule-providers:
   # 域名规则
-  Tracking: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Tracking.mrs}
-  Advertising: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Advertising.mrs}
-  Direct: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Direct.mrs}
-  Private: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Private.mrs}
-  Download: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Download.mrs}
-  ConnCheck: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/ConnCheck.mrs}
-  Speedtest: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Speedtest.mrs}
-  AI: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/AI.mrs}
-  Telegram: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Telegram.mrs}
-  SocialMedia: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/SocialMedia.mrs}
-  NewsMedia: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/domain/NewsMedia.mrs}
-  Games: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Games.mrs}
-  Crypto: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Crypto.mrs}
-  XPTV: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/XPTV.mrs}
-  Emby: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Emby.mrs}
-  Streaming: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Streaming.mrs}
-  AppleCN: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/AppleCN.mrs}
-  Apple: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Apple.mrs}
-  Google: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Google.mrs}
-  Microsoft: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/release/mihomo/domain/Microsoft.mrs}
-  Facebook: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/domain/Facebook.mrs}
-  Proxy: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/domain/Proxy.mrs}
-  China: {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/domain/China.mrs}
+  Tracking:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs}
+  Advertising:    {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.mrs} 
+  Direct:         {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
+  Private:        {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
+  Download:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
+  ConnCheck:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/ConnCheck.mrs}
+  Speedtest:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Speedtest.mrs}
+  AI:             {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/AI.mrs}  
+  Telegram:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Telegram.mrs}
+  SocialMedia:    {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/SocialMedia.mrs}
+  NewsMedia:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/NewsMedia.mrs}
+  Games:          {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Games.mrs}
+  Crypto:         {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Crypto.mrs}
+  XPTV:           {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}  
+  Emby:           {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Emby.mrs}
+  Streaming:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Streaming.mrs}  
+  AppleCN:        {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/AppleCN.mrs}
+  Apple:          {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Apple.mrs}
+  Google:         {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Google.mrs}
+  Microsoft:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Microsoft.mrs}  
+  Facebook:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Facebook.mrs}
+  Proxy:          {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Proxy.mrs}
+  China:          {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/China.mrs}
 
   # IP规则
-  AdvertisingIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Advertising.mrs}
-  PrivateIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Private.mrs}
-  AIIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/AI.mrs}
-  TelegramIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Telegram.mrs}
-  SocialMediaIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/SocialMedia.mrs}
-  XPTVIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/XPTV.mrs}
-  EmbyIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Emby.mrs}
-  StreamingIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Streaming.mrs}
-  GoogleIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Google.mrs}
-  FacebookIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Facebook.mrs}
-  ProxyIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/Proxy.mrs}
-  ChinaIP: {<<: *BehaviorIP, url: https://raw.githubusercontent.com/666OS/rules/raw/release/mihomo/ip/China.mrs}
+  AdvertisingIP:  {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Advertising.mrs}
+  PrivateIP:      {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Private.mrs}
+  AIIP:           {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/AI.mrs}
+  TelegramIP:     {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Telegram.mrs}  
+  SocialMediaIP:  {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/SocialMedia.mrs}  
+  XPTVIP:         {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/XPTV.mrs}
+  EmbyIP:         {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Emby.mrs}
+  StreamingIP:    {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Streaming.mrs}  
+  GoogleIP:       {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Google.mrs}
+  FacebookIP:     {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Facebook.mrs}  
+  ProxyIP:        {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/Proxy.mrs} 
+  ChinaIP:        {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/China.mrs}
 
   # 广告规则
   AWAvenueAds: {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
