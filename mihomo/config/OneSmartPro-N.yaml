@@ -169,9 +169,11 @@ proxy-groups:
   - {name: 游戏平台, <<: *SelectLD, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png}
   - {name: 货币平台, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Cryptocurrency_3.png}
   - {name: Emby服, <<: *SelectBW, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
+  - {name: 油管视频, <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/YouTube.png}
+  - {name: 奈飞视频, <<: *SelectBW, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
   - {name: 视频媒体, <<: *SelectBW, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png}
   - {name: 新闻媒体, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png}
-  - {name: Github, <<: *SelectHQ, icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github(1).png}
+  - {name: Github, <<: *OneSmart, icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github(1).png}
   - {name: 苹果服务, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png}
   - {name: 谷歌服务, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
   - {name: 微软服务, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png}
@@ -227,6 +229,8 @@ rules:
   - RULE-SET,Games,游戏平台
   - RULE-SET,Crypto,货币平台
   - RULE-SET,Emby,Emby服
+  - RULE-SET,Netflix,奈飞视频
+  - RULE-SET,YouTube,油管视频
   - RULE-SET,Streaming,视频媒体
   - RULE-SET,Apple,苹果服务
   - RULE-SET,Google,谷歌服务
@@ -275,6 +279,8 @@ rule-providers:
   NewsMedia:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/NewsMedia.mrs}
   Games:          {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Games.mrs}
   Crypto:         {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Crypto.mrs}
+  Netflix:        {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Netflix.mrs}
+  YouTube:        {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/YouTube.mrs}
   XPTV:           {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}  
   Emby:           {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Emby.mrs}
   Streaming:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Streaming.mrs}  
