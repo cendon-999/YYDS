@@ -145,8 +145,9 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - https://doh.zaoy.cn
+    #- https://dns.google/dns-query
+    #- https://cloudflare-dns.com/dns-query
   fake-ip-filter:
     - rule-set:fakeip-filter
     - rule-set:ConnCheck
