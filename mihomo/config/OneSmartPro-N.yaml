@@ -203,8 +203,8 @@ proxy-groups:
   - {name: 游戏节点, <<: *SelectHQ, include-all: true, filter: *FilterAL, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PlayStation.png}
   - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?=.*(?i)(自建|home))", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
   # 中转服务层 - LoadBalance负载均衡，提供中转服务提升连通性，选用一个或多个服务商做中转，比如 优质服务商，可通过正则表达式，过滤掉不需要的节点，使用时请修改
-  - {name: 中转服务, <<: *BaseLB, use: [备用服务商], filter: '香港', hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin.png}
-
+  #- {name: 中转服务, <<: *BaseLB, use: [备用服务商], filter: '香港', hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin.png}
+  - {name: 中转服务, type: select, proxies: [香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接, 自建/家宽节点], icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Rocket.png, include-all: true, filter: *FilterAL}                
 # ==================== 规则路由 ====================
 rules:
   # 拦截规则
