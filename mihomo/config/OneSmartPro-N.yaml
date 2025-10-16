@@ -213,7 +213,7 @@ rules:
   #- DOMAIN-SUFFIX,sapphire-lobby.prod.demonware.net,游戏节点
   - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - RULE-SET,Tracking,REJECT
-  - RULE-SET,AWAvenueAds,REJECT
+  #- RULE-SET,AWAvenueAds,REJECT
   - RULE-SET,Advertising,REJECT
   # 域名规则
   - RULE-SET,ConnCheck,直接连接
@@ -309,7 +309,7 @@ rule-providers:
   ChinaIP:        {<<: *BehaviorIP, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/ip/China.mrs}
 
   # 广告规则
-  AWAvenueAds: {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
+  #AWAvenueAds: {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
   # 其他规则
   github: {<<: *ClassicalYaml, url: https://rule.kelee.one/Clash/GitHub.yaml}
   fakeip-filter: {<<: *BehaviorDN, url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs}
