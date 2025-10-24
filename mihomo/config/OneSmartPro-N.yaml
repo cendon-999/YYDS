@@ -209,7 +209,7 @@ proxy-groups:
 rules:
   # 拦截规则
   - DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com,游戏节点
-  #- DOMAIN-SUFFIX,genesis.stun.us.demonware.net,游戏节点
+  - DOMAIN-SUFFIX,genesis.stun.us.demonware.net,游戏节点
   #- DOMAIN-SUFFIX,sapphire-lobby.prod.demonware.net,游戏节点
   - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - RULE-SET,Tracking,REJECT
