@@ -208,11 +208,11 @@ proxy-groups:
 # ==================== 规则路由 ====================
 rules:
   # 拦截规则
-  #- DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com,游戏节点
-  #- DOMAIN-SUFFIX,genesis.stun.us.demonware.net,游戏节点
-  #- DOMAIN-SUFFIX,genesis.stun.eu.demonware.net,游戏节点
-  #- DOMAIN-SUFFIX,sapphire-lobby.prod.demonware.net,游戏节点
-  #- DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
+  - DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com,游戏节点
+  - DOMAIN-SUFFIX,genesis.stun.us.demonware.net,游戏节点
+  - DOMAIN-SUFFIX,genesis.stun.eu.demonware.net,游戏节点
+  - DOMAIN-SUFFIX,sapphire-lobby.prod.demonware.net,游戏节点
+  - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - RULE-SET,Tracking,REJECT
   #- RULE-SET,AWAvenueAds,REJECT
   - RULE-SET,Advertising,REJECT
