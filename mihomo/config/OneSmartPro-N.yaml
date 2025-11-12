@@ -99,7 +99,7 @@ profile:
 
 # 流量嗅探
 sniffer:
-  enable: false
+  enable: true
   override-destination: false
   force-dns-mapping: true
   parse-pure-ip: true
@@ -136,7 +136,7 @@ dns:
   respect-rules: true
   fake-ip-filter:
     - rule-set:fakeip-filter
-    - rule-set:ConnCheck
+    - rule-set:Direct
     - rule-set:Private
     - rule-set:China
     - +.pub.3gppnetwork.org
@@ -145,8 +145,9 @@ dns:
     - +.market.xiaomi.com
     - +.push.apple.com
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://223.6.6.6  
+    - 119.29.29.29
+    - 180.184.1.1
+    - 223.5.5.5  
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -216,7 +217,6 @@ rules:
   #- RULE-SET,AWAvenueAds,REJECT
   - RULE-SET,Advertising,REJECT
   # 域名规则
-  - RULE-SET,ConnCheck,直接连接
   - RULE-SET,Private,直接连接
   - RULE-SET,Direct,直接连接
   - RULE-SET,XPTV,直接连接
@@ -273,7 +273,6 @@ rule-providers:
   Direct:         {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
   Private:        {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
   Download:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
-  ConnCheck:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/ConnCheck.mrs}
   Speedtest:      {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Speedtest.mrs}
   AI:             {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/AI.mrs}  
   Telegram:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Telegram.mrs}
