@@ -167,7 +167,7 @@ dns:
   # 配置查询访问域名使用的服务器
   nameserver-policy:
     # 直连类规则集匹配的域名绑定国内上游，首跳即国内，不触发国外→国内回切
-    "rule-set:ConnCheck,Private,China":
+    "rule-set:Private,China":
       - "https://dns.alidns.com/dns-query"
       - "https://doh.pub/dns-query"
 
