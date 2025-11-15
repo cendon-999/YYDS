@@ -116,14 +116,10 @@ tun:
   auto-detect-interface: true
   
 hosts:
-  miwifi.com: 192.168.31.2
+  mmmm.cc: 192.168.31.2
   "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
   services.googleapis.cn: services.googleapis.com
-  cn.bing.com: global.bing.com
-  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
-  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
-  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
-  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+  cn.bing.com: www4.bing.com
 
 # DNS配置
 dns:
@@ -133,6 +129,7 @@ dns:
   listen: 0.0.0.0:1053
   fake-ip-range: 28.0.0.1/8
   enhanced-mode: fake-ip
+  use-hosts: true
   respect-rules: true
   fake-ip-filter:
     - rule-set:fakeip-filter
@@ -145,9 +142,8 @@ dns:
     - +.market.xiaomi.com
     - +.push.apple.com
   default-nameserver:
-    - 119.29.29.29
-    - 180.184.1.1
-    - 223.5.5.5  
+    - tls://223.5.5.5
+    - tls://223.6.6.6
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
