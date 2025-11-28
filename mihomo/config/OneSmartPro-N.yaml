@@ -99,10 +99,22 @@ profile:
 
 # 流量嗅探
 sniffer:
+  #enable: true
+  #override-destination: false
+  #force-dns-mapping: true
+  #parse-pure-ip: true
   enable: true
-  override-destination: false
-  force-dns-mapping: true
-  parse-pure-ip: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
 
 # TUN模式配置
 tun:
@@ -116,17 +128,24 @@ tun:
   auto-detect-interface: true
   
 hosts:
-  mmmm.cc: 192.168.31.2
-  "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
+  #mmmm.cc: 192.168.31.2
+  #"epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
+  #services.googleapis.cn: services.googleapis.com
+  #cn.bing.com: www4.bing.com
+  miwifi.com: 192.168.31.2
   services.googleapis.cn: services.googleapis.com
-  cn.bing.com: www4.bing.com
+  cn.bing.com: global.bing.com
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
 
 # DNS配置
 dns:
   enable: true
   ipv6: true
   listen: 0.0.0.0:1053
-  fake-ip-range: 28.0.0.1/8
+  fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
   use-hosts: true
   respect-rules: true
@@ -136,6 +155,7 @@ dns:
     - rule-set:Private
     - rule-set:China
     - +.pub.3gppnetwork.org
+    - "+.bing.com"
     - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
