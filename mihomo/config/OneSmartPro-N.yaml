@@ -188,7 +188,7 @@ proxy-groups:
   - {name: 奈飞视频, <<: *SelectBW, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png}
   - {name: 视频媒体, <<: *SelectBW, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png}
   - {name: 新闻媒体, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png}
-  - {name: Github, <<: *OneSmart, icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github(1).png}
+  - {name: Github, <<: *OneSmart, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub_Letter.png}
   - {name: 苹果服务, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png}
   - {name: 谷歌服务, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
   - {name: 微软服务, <<: *SelectHQ, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png}
