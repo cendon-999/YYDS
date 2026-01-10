@@ -39,13 +39,13 @@ FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|
 FilterAL: &FilterAL '^(?!.*(无法|说明|使用|提示|特别|访问|支持|教程|关注|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectAL: &SelectAL {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
-OneSmart: &OneSmart {type: select, proxies: [一键智能, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择]}
-SelectHQ: &SelectHQ {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
-SelectLD: &SelectLD {type: select, proxies: [低延迟线路, 高质量线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
-SelectBW: &SelectBW {type: select, proxies: [大带宽线路, 高质量线路, 低延迟线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
-SelectLR: &SelectLR {type: select, proxies: [低倍率线路, 高质量线路, 低延迟线路, 大带宽线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
+SelectAL: &SelectAL {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接, 自建/家宽节点]}
+OneSmart: &OneSmart {type: select, proxies: [一键智能, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接, 自建/家宽节点]}
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 自建/家宽节点]}
+SelectHQ: &SelectHQ {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接, 自建/家宽节点]}
+SelectLD: &SelectLD {type: select, proxies: [低延迟线路, 高质量线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接, 游戏节点]}
+SelectBW: &SelectBW {type: select, proxies: [大带宽线路, 高质量线路, 低延迟线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接, 自建/家宽节点]}
+SelectLR: &SelectLR {type: select, proxies: [低倍率线路, 高质量线路, 低延迟线路, 大带宽线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接, 自建/家宽节点]}
 
 # ==================== 代理提供者 ====================
 proxy-providers:
@@ -153,10 +153,17 @@ dns:
     - 119.29.29.29
     - 180.184.1.1
     - 223.5.5.5
-  nameserver:
+  proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query  
   fake-ip-filter:
+    - rule-set:fakeip-filter
     - rule-set:Direct
     - rule-set:Private
     - rule-set:China
@@ -176,8 +183,11 @@ proxy-groups:
   - {name: 游戏平台,  <<: *SelectLD, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
   - {name: 货币平台,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Cryptocurrency_3.png}
   - {name: Emby服,   <<: *SelectBW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png}
+  - {name: 油管视频, <<: *SelectBW, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png}
+  - {name: 奈飞视频, <<: *SelectBW, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png}
   - {name: 国际媒体,  <<: *SelectBW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 新闻媒体,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_News.png}
+  - {name: Github, <<: *OneSmart, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png}
   - {name: 苹果服务,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
   - {name: 谷歌服务,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png}
   - {name: 微软服务,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png}
@@ -234,9 +244,12 @@ rules:
   - RULE-SET,Games,游戏平台
   - RULE-SET,Crypto,货币平台
   - RULE-SET,Emby,Emby服
+  - RULE-SET,Netflix,奈飞视频
+  - RULE-SET,YouTube,油管视频
   - RULE-SET,Streaming,国际媒体
   - RULE-SET,Apple,苹果服务 
   - RULE-SET,Google,谷歌服务
+  - RULE-SET,github,Github
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Facebook,脸书服务
   - RULE-SET,Proxy,国外流量
@@ -279,6 +292,8 @@ rule-providers:
   NewsMedia:      {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/NewsMedia.mrs}
   Games:          {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Games.mrs}
   Crypto:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Crypto.mrs}
+  Netflix:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Netflix.mrs}
+  YouTube:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/YouTube.mrs}
   XPTV:           {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}  
   Emby:           {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Emby.mrs}
   Streaming:      {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Streaming.mrs}  
