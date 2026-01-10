@@ -20,7 +20,7 @@
 
 # ==================== 锚点配置 ====================
 # 代理提供者模板 - 订阅源基础配置
-BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(无法|说明|使用|提示|特别|访问|支持|教程|关注|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 策略组类型模板 - 定义不同的策略组基础配置
 BaseFB: &BaseFB       {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204'}
@@ -28,15 +28,15 @@ BaseLB: &BaseLB       {type: load-balance, interval: 200, lazy: true, url: 'http
 BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, uselightgbm: true}
 
 # 节点筛选正则表达式 - 基于地理位置和关键词过滤
-FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
-FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
-FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$'
-FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
-FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$'
-FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$'
-FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
+FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(法国|欧港专线|俄罗斯|Russia|РФ|🇷🇺|德国|Deutschland|🇩🇪|土耳其|Türkiye|Turkiye|🇹🇷|英国|United Kingdom|UK|Britain|England|🇬🇧|摩尔多瓦|Moldova|MDA|🇲🇩)).*$'
+FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|XSP))(?!.*(排除1|排除2)).*$'
+FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|尼日利亚|Nigeria)).*$'
+FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|乌克兰|Ukraine|南非|South Africa)).*$'
+FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x|澳大利亚|Australia|亚美尼亚|俄罗斯|Russia)).*$'
+FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2)).*$'
+FilterEU: &FilterEU '^(?=.*(?i)(俄|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|RU|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
-FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
+FilterAL: &FilterAL '^(?!.*(无法|说明|使用|提示|特别|访问|支持|教程|关注|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
 SelectAL: &SelectAL {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
@@ -50,16 +50,19 @@ SelectLR: &SelectLR {type: select, proxies: [低倍率线路, 高质量线路, �
 # ==================== 代理提供者 ====================
 proxy-providers:
   # 优质订阅源 - 优质节点集合，使用时请修改
-  优质服务商: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
+  优质服务商: {<<: *BaseProvider, url: '优质订阅源地址1', override: {additional-prefix: '[优] '}}
+  次优服务商: {<<: *BaseProvider, url: '优质订阅源地址2', override: {additional-prefix: '[次] '}}
   # 备用订阅源 - 次优节点集合，使用时请修改
   备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  # 自建订阅源 - 自建节点集合，使用时请修改
+  聚合服务商: {<<: *BaseProvider, url: '自建订阅源地址', override: {additional-prefix: '[自建] '}}
   # 落地订阅源 - 落地服务连接，使用时请修改
-  落地服务商: {<<: *BaseProvider, url: '落地订阅源地址', override: {additional-prefix: '[中] ', dialer-proxy: 中转服务}}
+  落地服务商: {<<: *BaseProvider, url: '中转订阅源地址', override: {additional-prefix: '[中] ', dialer-proxy: 中转服务}}
 
 # ==================== 监听器 ====================
 listeners:
   # Shadowsocks监听器 - 代理节点 玩法：远程连接家庭网络，端口和密码，使用时请修改
-  - {name: SS-IN,  type: shadowsocks, listen: '::', port: 10000, udp: true, password: Xf3#Lp9WqZ, cipher: aes-256-gcm}
+  - {name: SS-IN,  type: shadowsocks, listen: '::', port: 10000, udp: true, password: WU3#Lp9WqZ, cipher: aes-256-gcm}
   # Mixed监听器 - 分地区专用端口 玩法：本地浏览器插件或手机APP配置代理，实现分地区访问
   - {name: MIXED-SG, type: mixed, port: 50000, proxy: 美国智能}
   - {name: MIXED-US, type: mixed, port: 50001, proxy: 狮城智能}
@@ -132,7 +135,7 @@ sniffer:
 # TUN模式配置
 tun:
   enable: false
-  stack: mixed
+  stack: gvisor
   dns-hijack:
     - "any:53"
     - "tcp://any:53"
@@ -192,20 +195,27 @@ proxy-groups:
   - {name: 低倍率线路,  <<: *BaseFB, proxies: [日本智能, 香港智能, 台湾智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
 
  # 地理策略层 - Smart智能选择，政策权重数值越大优先级越高，修改为关键词节点，比如 优:2;中:1;备:0.5，默认为1，优>中>备，使用时请修改
-  - {name: 香港智能,  <<: *BaseSmart, filter: *FilterHK, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
-  - {name: 台湾智能,  <<: *BaseSmart, filter: *FilterTW, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
-  - {name: 日本智能,  <<: *BaseSmart, filter: *FilterJP, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
-  - {name: 狮城智能,  <<: *BaseSmart, filter: *FilterSG, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
-  - {name: 韩国智能,  <<: *BaseSmart, filter: *FilterKR, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
-  - {name: 美国智能,  <<: *BaseSmart, filter: *FilterUS, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
-  - {name: 欧洲智能,  <<: *BaseSmart, filter: *FilterEU, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
+  - {name: 香港智能,  <<: *BaseSmart, filter: *FilterHK, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
+  - {name: 台湾智能,  <<: *BaseSmart, filter: *FilterTW, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
+  - {name: 日本智能,  <<: *BaseSmart, filter: *FilterJP, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
+  - {name: 狮城智能,  <<: *BaseSmart, filter: *FilterSG, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
+  - {name: 韩国智能,  <<: *BaseSmart, filter: *FilterKR, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
+  - {name: 美国智能,  <<: *BaseSmart, filter: *FilterUS, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
+  - {name: 欧洲智能,  <<: *BaseSmart, filter: *FilterEU, include-all: true, policy-priority: '优:2;次:1;备:0.5', icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
   
-  # 中转服务层 - LoadBalance负载均衡，提供中转服务提升连通性，选用一个或多个服务商做中转，比如 优质服务商，可通过正则表达式，过滤掉不需要的节点，使用时请修改
-  - {name: 中转服务,  <<: *BaseLB, use: [优质服务商], filter: 'HK|TW', hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
+  - {name: 游戏节点, <<: *SelectHQ, include-all: true, filter: *FilterAL, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PlayStation.png}
+  - {name: 自建/家宽节点, type: select, include-all: true, filter: "(?=.*(?i)(自建|home))", icon: "https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/private_node.png"}
+  - {name: 中转服务, type: select, proxies: [香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接, 自建/家宽节点], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png, include-all: true, filter: *FilterAL}                
 
 # ==================== 规则路由 ====================
 rules: 
   # 拦截规则
+  - DOMAIN-KEYWORD,hinet.net,台湾智能
+  - DOMAIN-KEYWORD,hoy.tv,香港智能
+  - DOMAIN-KEYWORD,rthktv,香港智能
+  - DOMAIN-KEYWORD,iill,香港智能
+  - DOMAIN-KEYWORD,fengshows,DIRECT
+  #- DOMAIN-KEYWORD,miguvideo,香港智能
   - RULE-SET,Tracking,REJECT
   - RULE-SET,Advertising,REJECT
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT  # 阻止海外 QUIC
@@ -293,4 +303,11 @@ rule-providers:
   FacebookIP:     {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Facebook.mrs}  
   ProxyIP:        {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Proxy.mrs} 
   ChinaIP:        {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/China.mrs}
-# ==================== EOF ====================
+  
+  # 广告规则
+  #AWAvenueAds: {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
+  # 其他规则
+  github: {<<: *ClassicalYaml, url: https://rule.kelee.one/Clash/GitHub.yaml}
+  fakeip-filter: {<<: *BehaviorDN, url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs}
+
+  # ==================== EOF ====================
