@@ -280,6 +280,7 @@ rules:
   - RULE-SET,ChinaIP,国内流量,no-resolve
 
   # 兜底规则
+  - RULE-SET,cn,直接连接
   - MATCH,兜底流量
 
 # ==================== 规则集 ====================
@@ -334,6 +335,7 @@ rule-providers:
   # 广告规则
   #AWAvenueAds: {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
   # 其他规则
+  cn: {<<: *BehaviorDN, url: "https://raw.githubusercontent.com/HenryChiao/mihomo_yamls/refs/heads/ruleset/meta/domain/cn.mrs"}
   github: {<<: *ClassicalYaml, url: https://rule.kelee.one/Clash/GitHub.yaml}
   fakeip-filter: {<<: *BehaviorDN, url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs}
 
