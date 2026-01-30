@@ -275,10 +275,10 @@ rules:
   - RULE-SET,GoogleIP,谷歌服务,no-resolve
   - RULE-SET,FacebookIP,脸书服务,no-resolve
   - RULE-SET,ProxyIP,国外流量,no-resolve
-  - RULE-SET,ChinaIP,国内流量,no-resolve
+  - RULE-SET,ChinaIP,国内流量
 
   # 兜底规则
-  - RULE-SET,cn,直接连接
+ # - RULE-SET,cn,直接连接
   - MATCH,兜底流量
 
 # ==================== 规则集 ====================
@@ -333,7 +333,7 @@ rule-providers:
   # 广告规则
   #AWAvenueAds: {<<: *BehaviorDY, url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
   # 其他规则
-  cn: {<<: *BehaviorDN, url: "https://raw.githubusercontent.com/HenryChiao/mihomo_yamls/refs/heads/ruleset/meta/domain/cn.mrs"}
+ # cn: {<<: *BehaviorDN, url: "https://raw.githubusercontent.com/HenryChiao/mihomo_yamls/refs/heads/ruleset/meta/domain/cn.mrs"}
   github: {<<: *ClassicalYaml, url: "https://rule.kelee.one/Clash/GitHub.yaml"}
 
   # ==================== FakeIP过滤 ====================
