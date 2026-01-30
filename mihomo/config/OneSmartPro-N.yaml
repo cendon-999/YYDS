@@ -158,7 +158,7 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - 'RULE-SET:fakeip-filter,Private,Direct,China,cn,xiaomi,iptv,pt_cn,115,aliyun,NetEaseMusic,ai_cn,game_cn,public-tracker,apple_firmware'
+    - 'RULE-SET:fakeip-filter,Private,Direct,China,xiaomi,iptv,pt_cn,115,aliyun,NetEaseMusic,ai_cn,game_cn,public-tracker,apple_firmware'
     - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
