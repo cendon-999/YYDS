@@ -176,7 +176,7 @@ dns:
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query  
   nameserver-policy:
-    'rule-set:Private,Direct,China,cn': 
+    'rule-set:Private,Direct,China': 
     - 202.103.24.68
     - 202.103.44.150
 
