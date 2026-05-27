@@ -162,12 +162,11 @@ dns:
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
-    - DOMAIN-SUFFIX,stun,real-ip
-    - DOMAIN-KEYWORD,stun,real-ip
-    - DOMAIN-SUFFIX,turn,real-ip
-    - DOMAIN-KEYWORD,turn,real-ip
-    - DOMAIN-SUFFIX,relay,real-ip
-    - DOMAIN-KEYWORD,relay,real-ip
+    - +.stun.
+    - +.stun.*.
+    - +.stun.*.*.
+    - +.stun.*.*.*.
+    - +.stun.*.*.*.*.
 
 # ==================== 代理策略组 ====================
 proxy-groups:
