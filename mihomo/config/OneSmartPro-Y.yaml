@@ -176,7 +176,7 @@ proxy-groups:
   - {name: 网络测试,  <<: *OneSmart, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Speedtest.png, include-all: true}
   - {name: 人工智能,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
   - {name: 电报消息,  <<: *SelectBW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
-  - {name: Github,   <<: *OneSmart, icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/GitHub.png}
+  - {name: Github,   <<: *OneSmart, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png}
   - {name: 社交平台,  <<: *SelectLR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png} 
   - {name: 游戏平台,  <<: *SelectLD, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png}
   - {name: 货币平台,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Cryptocurrency_3.png}
