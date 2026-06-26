@@ -244,12 +244,8 @@ rules:
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
 
 # ==================== 独立/特定分流规则 ====================
-  - DOMAIN-KEYWORD,hinet.net,台湾策略
-  - DOMAIN-KEYWORD,hoy.tv,香港策略
-  - DOMAIN-KEYWORD,rthktv,香港策略
-  - DOMAIN-KEYWORD,iill,香港策略
-  - DOMAIN-KEYWORD,fengshows,直接连接
-  #- DOMAIN-KEYWORD,miguvideo,香港策略
+  
+  
   # --- PikPak (屏蔽地区检测/直连下载) ---
   - DOMAIN,access.mypikpak.com,REJECT
   - DOMAIN,access.mypikpak.net,REJECT
