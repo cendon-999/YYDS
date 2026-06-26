@@ -244,16 +244,6 @@ rules:
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
 
 # ==================== 独立/特定分流规则 ====================
-  - DOMAIN-KEYWORD,synology,直接连接
-  - DOMAIN-SUFFIX,appv12.qichacha.net,直接连接
-  - DOMAIN-SUFFIX,gst.prod.dl.playstation.net,直接连接
-  - DOMAIN-SUFFIX,vsean.net,直接连接
-  - DOMAIN-KEYWORD,callofduty,游戏节点
-  - DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com,游戏节点
-  - DOMAIN-SUFFIX,genesis.stun.us.demonware.net,游戏节点
-  - DOMAIN-SUFFIX,genesis.stun.eu.demonware.net,游戏节点
-  - DOMAIN-SUFFIX,sapphire-lobby.prod.demonware.net,游戏节点
-  - DOMAIN-SUFFIX,ingest.datax.activision.com,游戏节点
   - DOMAIN-KEYWORD,hinet.net,台湾策略
   - DOMAIN-KEYWORD,hoy.tv,香港策略
   - DOMAIN-KEYWORD,rthktv,香港策略
