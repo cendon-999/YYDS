@@ -8,7 +8,7 @@
 # ||      ╚═════╝  ╚═════╝  ╚═════╝      ||
 # ||                                     ||
 # >>=====================================<<
-# Mini_en Edition v2.0.3 by YYDS666 (2026-06-16)
+# Mini_en Edition v2.0.4 by YYDS666 (2026-07-09)
 # Repo: https://github.com/666OS/YYDS | Channel: https://t.me/Pinched666
 # Add your subscription links in proxy-providers, or insert custom nodes under proxies
 
@@ -86,7 +86,7 @@ dns:
   fake-ip-range: 198.18.0.1/16
   default-nameserver: [119.29.29.29, 180.184.1.1, 223.5.5.5]
   nameserver: [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
-  fake-ip-filter: [+.miwifi.com, +.docker.io, +.market.xiaomi.com, +.push.apple.com]
+  fake-ip-filter: ["+.lan", "*.local", "+.gstatic.com", "+.miwifi.com", "+.market.xiaomi.com", "+.push.apple.com"]
 
 proxy-groups:
   - { name: OUTCN,     type: select, include-all: true, empty-fallback: REJECT, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png }

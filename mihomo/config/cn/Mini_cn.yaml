@@ -8,7 +8,7 @@
 # ||      ╚═════╝  ╚═════╝  ╚═════╝      ||
 # ||                                     ||
 # >>=====================================<<
-# Mini中文版 v2.0.3 by YYDS666 (2026-06-16)
+# Mini中文版 v2.0.4 by YYDS666 (2026-07-09)
 # 项目: https://github.com/666OS/YYDS | 频道: https://t.me/Pinched666
 # 请在 proxy-providers 中添加您的订阅链接，或在 proxies 中添加自定义节点
 
@@ -86,7 +86,7 @@ dns:
   fake-ip-range: 198.18.0.1/16
   default-nameserver: [119.29.29.29, 180.184.1.1, 223.5.5.5]
   nameserver: [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
-  fake-ip-filter: [+.miwifi.com, +.docker.io, +.market.xiaomi.com, +.push.apple.com]
+  fake-ip-filter: ["+.lan", "*.local", "+.gstatic.com", "+.miwifi.com", "+.market.xiaomi.com", "+.push.apple.com"]
 
 # 代理策略组
 proxy-groups:

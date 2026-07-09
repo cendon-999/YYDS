@@ -8,7 +8,7 @@
 # ||      ╚═════╝  ╚═════╝  ╚═════╝      ||
 # ||                                     ||
 # >>=====================================<<
-# Lite 中文版 v2.0.3 by YYDS666 (2026-06-16)
+# Lite 中文版 v2.0.4 by YYDS666 (2026-07-09)
 # 项目: https://github.com/666OS/YYDS | 频道: https://t.me/Pinched666
 # 请在 proxy-providers 中添加您的订阅链接，或在 proxies 中添加自定义节点
 
@@ -19,12 +19,12 @@ x-base-provider: &base-provider {type: http, interval: 86400, health-check: {ena
 x-url-test:   &url-test { type: url-test, url: "https://www.gstatic.com/generate_204", interval: 300, empty-fallback: REJECT, include-all: true, hidden: true, tolerance: 50 }
 x-fallback:   &fallback { type: fallback, url: "https://www.gstatic.com/generate_204", interval: 300, empty-fallback: REJECT }
 
-x-filter-hk:  &filter-hk    "(?i)港|hk|hongkong|hong kong|🇭🇰"
-x-filter-tw:  &filter-tw    "(?i)台|tw|taiwan|taipei|🇹🇼|🇼🇸"
-x-filter-jp:  &filter-jp    "(?i)日|jp|japan|tokyo|🇯🇵"
-x-filter-sg:  &filter-sg    "(?i)新|sg|singapore|🇸🇬"
-x-filter-kr:  &filter-kr    "(?i)韩|kr|korea|seoul|🇰🇷"
-x-filter-us:  &filter-us    "(?i)美|us|usa|america|united states|🇺🇸"
+x-filter-hk:    &filter-hk    "^(?i)(?=.*(港|hk|hongkong|hong kong|🇭🇰|hkg))(?!.*(排除)).*$"
+x-filter-tw:    &filter-tw    "^(?i)(?=.*(台|tw|taiwan|taipei|🇹🇼|🇼🇸|tpe|khh|tsa))(?!.*(排除)).*$"
+x-filter-jp:    &filter-jp    "^(?i)(?=.*(日|jp|japan|tokyo|🇯🇵|nrt|hnd|kix|cts|fuk))(?!.*(排除|尼日)).*$"
+x-filter-sg:    &filter-sg    "^(?i)(?=.*(新|坡|sg|singapore|🇸🇬|sin|xsp))(?!.*(排除|西兰|几内亚|德里|泽西)).*$"
+x-filter-kr:    &filter-kr    "^(?i)(?=.*(韩|韓|kr|korea|seoul|首尔|南朝鲜|🇰🇷|icn|gmp|pus))(?!.*(排除)).*$"
+x-filter-us:    &filter-us    "^(?i)(?=.*(美|us|usa|america|united states|🇺🇸|lax|sfo|jfk|sjc))(?!.*(排除)).*$"
 
 x-oversea:   &oversea   [故障转移, 全球手动, 香港策略, 台湾策略, 日本策略, 狮城策略, 韩国策略, 美国策略, DIRECT]
 x-direct:    &direct    [DIRECT, 故障转移, 全球手动, 香港策略, 台湾策略, 日本策略, 狮城策略, 韩国策略, 美国策略]
@@ -103,7 +103,7 @@ dns:
   fake-ip-range: 198.18.0.1/16
   default-nameserver: [119.29.29.29, 180.184.1.1, 223.5.5.5]
   nameserver: [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
-  fake-ip-filter: [+.miwifi.com, +.docker.io, +.market.xiaomi.com, +.push.apple.com]
+  fake-ip-filter: ["+.lan", "*.local", "+.gstatic.com", "+.miwifi.com", "+.market.xiaomi.com", "+.push.apple.com"]
 
 # 代理策略组
 proxy-groups:
@@ -113,6 +113,7 @@ proxy-groups:
   - { name: 人工智能, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png }
   - { name: 开发服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png }
   - { name: 国际媒体, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming.png }
+  - { name: 谷歌服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png }
   - { name: 苹果服务, type: select, proxies: *direct, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_1.png }
   - { name: 国外流量, type: select, proxies: *oversea, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png }
   - { name: 国内流量, type: select, proxies: *direct, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png }
@@ -154,7 +155,9 @@ rules:
   # 国际媒体
   - RULE-SET,Streaming,国际媒体
   - RULE-SET,StreamingIP,国际媒体,no-resolve
-  # 苹果服务
+  # 平台服务
+  - RULE-SET,Google,谷歌服务
+  - RULE-SET,GoogleIP,谷歌服务,no-resolve
   - RULE-SET,Apple,苹果服务
   # 国外流量
   - RULE-SET,Proxy,国外流量
@@ -179,6 +182,7 @@ rule-providers:
   Spotify:    { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Spotify.mrs }
   Disney:    { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Disney.mrs }
   Streaming:    { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Streaming.mrs }
+  Google:         { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Google.mrs }
   Proxy:      { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Proxy.mrs }
   China:      { <<: *rule-set-domain, url: https://github.com/666OS/rules/raw/release/mihomo/domain/China.mrs }
   PrivateIP:    { <<: *rule-set-ipcidr, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Private.mrs }
@@ -189,3 +193,4 @@ rule-providers:
   StreamingIP:  { <<: *rule-set-ipcidr, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Streaming.mrs }
   ProxyIP:    { <<: *rule-set-ipcidr, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Proxy.mrs }
   ChinaIP:    { <<: *rule-set-ipcidr, url: https://github.com/666OS/rules/raw/release/mihomo/ip/China.mrs }
+  GoogleIP:       { <<: *rule-set-ipcidr, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Google.mrs }
