@@ -18,11 +18,11 @@
 
 ## 📦 配置文件概览 (v2)
 
-| 配置文件 | 版本 | 分流策略 | 中文版路径 | 英文版路径 |
-| :--- | :---: | :--- | :---: | :---: |
-| **Pro** | v2.0.5 | 完整策略集，支持测速与负载均衡。 | [Pro_cn.yaml](./cn/Pro_cn.yaml) | [Pro_en.yaml](./en/Pro_en.yaml) |
-| **Lite** | v2.0.5 | 常用策略集，采用自动测速。 | [Lite_cn.yaml](./cn/Lite_cn.yaml) | [Lite_en.yaml](./en/Lite_en.yaml) |
-| **Mini** | v2.0.5 | 基础分流，仅保留手动节点选择。 | [Mini_cn.yaml](./cn/Mini_cn.yaml) | [Mini_en.yaml](./en/Mini_en.yaml) |
+| 配置文件 | 分流策略 | 中文版路径 | 英文版路径 |
+| :--- | :--- | :---: | :---: |
+| **Pro** | 完整策略集，支持测速与负载均衡。 | [Pro_cn.yaml](./cn/Pro_cn.yaml) | [Pro_en.yaml](./en/Pro_en.yaml) |
+| **Lite** | 常用策略集，采用自动测速。 | [Lite_cn.yaml](./cn/Lite_cn.yaml) | [Lite_en.yaml](./en/Lite_en.yaml) |
+| **Mini** | 基础分流，仅保留手动节点选择。 | [Mini_cn.yaml](./cn/Mini_cn.yaml) | [Mini_en.yaml](./en/Mini_en.yaml) |
 
 ---
 
