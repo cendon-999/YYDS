@@ -147,6 +147,12 @@ dns:
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
+    - +.stun.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.turn
+    - +.turn.*
 
 # ==================== 代理策略组 ====================
 proxy-groups:
