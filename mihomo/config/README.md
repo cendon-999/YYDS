@@ -20,9 +20,9 @@
 
 | 配置文件 | 版本 | 分流策略 | 中文版路径 | 英文版路径 |
 | :--- | :---: | :--- | :---: | :---: |
-| **Pro** | v2.0.4 | 完整策略集，支持测速与负载均衡。 | [Pro_cn.yaml](./cn/Pro_cn.yaml) | [Pro_en.yaml](./en/Pro_en.yaml) |
-| **Lite** | v2.0.4 | 常用策略集，采用自动测速。 | [Lite_cn.yaml](./cn/Lite_cn.yaml) | [Lite_en.yaml](./en/Lite_en.yaml) |
-| **Mini** | v2.0.4 | 基础分流，仅保留手动节点选择。 | [Mini_cn.yaml](./cn/Mini_cn.yaml) | [Mini_en.yaml](./en/Mini_en.yaml) |
+| **Pro** | v2.0.5 | 完整策略集，支持测速与负载均衡。 | [Pro_cn.yaml](./cn/Pro_cn.yaml) | [Pro_en.yaml](./en/Pro_en.yaml) |
+| **Lite** | v2.0.5 | 常用策略集，采用自动测速。 | [Lite_cn.yaml](./cn/Lite_cn.yaml) | [Lite_en.yaml](./en/Lite_en.yaml) |
+| **Mini** | v2.0.5 | 基础分流，仅保留手动节点选择。 | [Mini_cn.yaml](./cn/Mini_cn.yaml) | [Mini_en.yaml](./en/Mini_en.yaml) |
 
 ---
 
@@ -59,8 +59,11 @@
 | **选择方式** | 测速 + 负载均衡 | 自动测速 | 手动选择 |
 | **故障转移** | ✅ | ✅ | ❌ |
 | **广告拦截** | ✅ | ❌ | ❌ |
-| **QUIC 阻断** | ✅ | ✅ | ✅ |
 | **策略组数量** | 17 | 9 | 3 |
+
+> [!NOTE]
+> **关于 QUIC 阻断 (Block QUIC) 的说明**
+> 主流客户端均已内置支持更佳兼容性的 QUIC 阻断实现（阻断 UDP 443 端口）。为保障通用分流配置的纯净度与连通稳定性，本配置不再对其进行硬编码处理，建议直接在客户端偏好设置中开启此功能。
 
 ### 🎛️ 策略组
 
